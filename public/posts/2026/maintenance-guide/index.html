@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website &amp; Blog Maintenance Guide — ICCC Hub</title>
+<meta name="description" content="How to maintain the ICCC website and Hugo blog — editing pages, writing posts, testing locally, and deploying via GitHub.">
+
+
+<link rel="icon" href="https://iccycling.github.io/iccc-hub/favicon.ico">
+
+
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/syne-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<meta property="og:site_name" content="ICCC Hub">
+<meta property="og:title" content="Website &amp; Blog Maintenance Guide">
+<meta property="og:description" content="How to maintain the ICCC website and Hugo blog — editing pages, writing posts, testing locally, and deploying via GitHub.">
+<meta property="og:url" content="https://iccycling.github.io/iccc-hub/posts/2026/maintenance-guide/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Website &amp; Blog Maintenance Guide">
+<meta name="twitter:description" content="How to maintain the ICCC website and Hugo blog — editing pages, writing posts, testing locally, and deploying via GitHub.">
+<meta name="twitter:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+
+<link rel="stylesheet" href="https://iccycling.github.io/iccc-hub/blog.css">
+</head>
+<body>
+
+<nav>
+  <a href="https://iccycling.github.io/" class="nav-logo">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC.svg" alt="ICCC" style="height:28px;width:auto;">
+  </a>
+  <ul class="nav-center">
+    <li><a href="https://iccycling.github.io/iccc-hub/posts/" class="active">Blog</a></li>
+    <li><a href="https://iccycling.github.io/iccc-hub/news/">News</a></li>
+  </ul>
+  <a href="https://iccycling.github.io/" class="nav-back">Back to ICCC</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <a href="https://iccycling.github.io/iccc-hub/posts/" class="active">Blog</a>
+  <a href="https://iccycling.github.io/iccc-hub/news/">News</a>
+  <a href="https://iccycling.github.io/">← Back to ICCC</a>
+</div>
+
+
+<div class="blog-wrap narrow">
+
+  <header class="post-header">
+    
+    <span class="post-tag">Website</span>
+    
+    <h1>Website &amp; Blog Maintenance Guide</h1>
+    <div class="post-meta">
+      
+      <a href="https://iccycling.github.io/iccc-hub/authors/frederik-beck/">Frederik Beck</a>
+      <span class="sep">·</span>
+      
+      <span>1 June 2025</span>
+      <span class="sep">·</span>
+      <span>4 min read</span>
+    </div>
+  </header>
+
+  <article class="post-body">
+    <p>This guide explains how to update the ICCC website and blog. No deep coding knowledge needed — most tasks are simple text edits.</p>
+<hr>
+<h2 id="part-1-main-website">Part 1: Main Website</h2>
+<p>The main website lives at <a href="https://github.com/iccycling/iccycling.github.io">github.com/iccycling/iccycling.github.io</a>. It is a <strong>static HTML site</strong> — no build step, no server, no database.</p>
+<h3 id="structure">Structure</h3>
+<pre tabindex="0"><code>iccycling.github.io/
+├── index.html        ← Homepage
+├── road.html         ← Road cycling
+├── offroad.html      ← Off-road / MTB
+├── club.html         ← About the club
+├── other.html        ← Other disciplines
+├── privacy.html      ← Privacy &amp; Legal
+├── main.css          ← All styles
+├── main.js           ← Nav behaviour
+├── feed.js           ← Fetches news &amp; blog from Hub
+└── images/           ← All images used on the site
+</code></pre><h3 id="making-changes">Making Changes</h3>
+<ol>
+<li>Download the repository as a ZIP from GitHub, or clone it with Git</li>
+<li>Open the relevant <code>.html</code> file in any text editor (VSCode recommended)</li>
+<li>Edit the content directly — headings, text, image paths</li>
+<li>Open the file in a browser to check it looks right</li>
+<li>Upload the changed file back to GitHub</li>
+</ol>
+<p>The site updates automatically within a minute or two after you push to GitHub.</p>
+<h3 id="images">Images</h3>
+<p>Replace images in the <code>images/</code> folder and update the <code>src</code> attribute in the HTML accordingly. Use web-optimised JPGs — aim for under 300KB per image.</p>
+<hr>
+<h2 id="part-2-hugo-blog-hub">Part 2: Hugo Blog (Hub)</h2>
+<p>The blog lives at <a href="https://github.com/iccycling/iccc-hub">github.com/iccycling/iccc-hub</a>. It uses <strong>Hugo</strong> — a static site generator that turns Markdown files into HTML pages.</p>
+<h3 id="installing-hugo-windows">Installing Hugo (Windows)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>winget install Hugo.Hugo.Extended
+</span></span></code></pre></div><p>Check it worked:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>hugo version
+</span></span></code></pre></div><p>You need <strong>Hugo Extended</strong> (not the standard version).</p>
+<h3 id="repository-structure">Repository Structure</h3>
+<pre tabindex="0"><code>iccc-hub/
+├── hugo.toml                      ← Site config (baseURL, title)
+├── content/
+│   ├── posts/                     ← Blog posts
+│   │   └── my-post/
+│   │       ├── index.md           ← Post content (must be named index.md)
+│   │       └── images/
+│   │           └── photo.jpg
+│   ├── news/                      ← News items
+│   │   └── my-news/
+│   │       └── index.md
+│   ├── authors/                   ← Author profiles
+│   │   └── my-name/
+│   │       └── index.md
+│   └── feed.md                    ← Triggers feed.json generation (don&#39;t touch)
+├── layouts/                       ← HTML templates (don&#39;t touch unless needed)
+├── static/
+│   ├── blog.css                   ← All styles
+│   ├── ICCC.svg                   ← Logo (nav)
+│   └── ICCC-white.svg             ← Logo (footer)
+└── public/                        ← Generated output (don&#39;t edit manually)
+</code></pre><h3 id="writing-a-blog-post">Writing a Blog Post</h3>
+<p>Create a new folder under <code>content/posts/</code> and add an <code>index.md</code>:</p>
+<pre tabindex="0"><code>content/posts/my-ride-report/
+├── index.md
+└── images/
+    └── photo.jpg
+</code></pre><p>Frontmatter template:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;My Ride Report&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-06-01</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">tags</span>: [<span style="color:#e6db74">&#34;Road&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;One sentence shown in the blog list.&#34;</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">Post content here in Markdown...</span>
+</span></span></code></pre></div><p>See the formatting guide post for full Markdown syntax, images, and video embedding.</p>
+<h3 id="writing-a-news-item">Writing a News Item</h3>
+<p>Same structure, under <code>content/news/</code>. Add <code>expires_on</code> if the news has a cutoff date — it will appear greyed out in the list afterwards but stays accessible:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Welcome Fair — Find Us at the Stalls&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-09-25</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">expires_on</span>: <span style="color:#e6db74">&#34;2025-09-27&#34;</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h3 id="testing-locally">Testing Locally</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># In the iccc-hub folder:</span>
+</span></span><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>Open <code>http://localhost:1313/iccc-hub/</code> in your browser. Hugo picks up changes automatically — no restart needed.</p>
+<blockquote>
+<p><code>hugo server</code> only serves files over HTTP. Don&rsquo;t open the HTML files directly in the browser.</p>
+</blockquote>
+<h3 id="building-for-deployment">Building for Deployment</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>hugo
+</span></span></code></pre></div><p>This generates all HTML into the <code>public/</code> folder. You normally don&rsquo;t need to do this manually — GitHub Actions handles it automatically on every push.</p>
+<hr>
+<h2 id="part-3-deployment-via-github-actions">Part 3: Deployment via GitHub Actions</h2>
+<p>Both repositories use <strong>GitHub Actions</strong> to build and deploy automatically.</p>
+<h3 id="how-it-works">How It Works</h3>
+<ol>
+<li>You push a change to GitHub (edit a file, add a post)</li>
+<li>GitHub Actions runs <code>hugo</code> automatically</li>
+<li>The output is deployed to GitHub Pages</li>
+<li>The live site updates within 1–2 minutes</li>
+</ol>
+<h3 id="checking-deployment-status">Checking Deployment Status</h3>
+<p>Go to your repository on GitHub → click <strong>Actions</strong> tab. You&rsquo;ll see a list of recent deployments — green tick means success, red cross means something went wrong. Click on a failed run to see the error log.</p>
+<h3 id="github-actions-workflow-file">GitHub Actions Workflow File</h3>
+<p>The workflow is at <code>.github/workflows/deploy.yml</code>. You shouldn&rsquo;t need to touch it, but it looks like this in outline:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [<span style="color:#ae81ff">main]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;0.157.0&#39;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">extended</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v4</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</span></span></code></pre></div><hr>
+<h2 id="quick-reference">Quick Reference</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Task</th>
+          <th>What to do</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Edit a page on the main site</td>
+          <td>Edit the <code>.html</code> file, push to GitHub</td>
+      </tr>
+      <tr>
+          <td>Add a blog post</td>
+          <td>Create <code>content/posts/my-post/index.md</code>, push</td>
+      </tr>
+      <tr>
+          <td>Add a news item</td>
+          <td>Create <code>content/news/my-news/index.md</code>, push</td>
+      </tr>
+      <tr>
+          <td>Test locally</td>
+          <td><code>hugo server</code> → open <code>localhost:1313</code></td>
+      </tr>
+      <tr>
+          <td>Check if deploy worked</td>
+          <td>GitHub → Actions tab</td>
+      </tr>
+      <tr>
+          <td>Update styles</td>
+          <td>Edit <code>static/blog.css</code> (Hub) or <code>main.css</code> (main site)</td>
+      </tr>
+  </tbody>
+</table>
+
+  </article>
+
+  <div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fposts%2F2026%2Fmaintenance-guide%2F&text=Website&#43;%26&#43;Blog&#43;Maintenance&#43;Guide" target="_blank" rel="noopener">X / Twitter</a>
+  <a class="share-btn" href="https://bsky.app/intent/compose?text=Website&#43;%26&#43;Blog&#43;Maintenance&#43;Guide%20https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fposts%2F2026%2Fmaintenance-guide%2F" target="_blank" rel="noopener">Bluesky</a>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fposts%2F2026%2Fmaintenance-guide%2F" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="share-btn" href="https://wa.me/?text=Website&#43;%26&#43;Blog&#43;Maintenance&#43;Guide%20https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fposts%2F2026%2Fmaintenance-guide%2F" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="share-btn" id="copy-link-btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.textContent='Copied!';this.classList.add('copied');setTimeout(()=>{this.textContent='Copy link';this.classList.remove('copied')},2000)})">Copy link</button>
+</div>
+
+
+  <nav class="post-nav">
+    
+    <a href="https://iccycling.github.io/iccc-hub/posts/2026/how-to-write-a-blog-post/" class="post-nav-item prev">
+      <span class="post-nav-dir">Previous post</span>
+      <span class="post-nav-title">How to Write a Blog Post for ICCC</span>
+    </a>
+    
+    
+    <a href="https://iccycling.github.io/iccc-hub/posts/2025/maintenance-guide/" class="post-nav-item next">
+      <span class="post-nav-dir">Next post</span>
+      <span class="post-nav-title">Website &amp; Blog Maintenance Guide</span>
+    </a>
+    
+  </nav>
+
+</div>
+
+
+<footer class="blog-footer">
+  <a href="https://iccycling.github.io/" class="blog-footer-brand">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC-white.svg" alt="ICCC" style="height:22px;width:auto;opacity:0.55;">
+  </a>
+  <div class="blog-footer-links">
+    <a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a>
+    <a href="https://iccycling.github.io/iccc-hub/news/">News</a>
+    <a href="https://iccycling.github.io/">Main Website</a>
+    <a href="https://iccycling.github.io/privacy.html">Privacy & Legal</a>
+  </div>
+  <span class="blog-footer-copy">© Imperial College Cycling Club 2026.</span>
+</footer>
+
+<script>
+  
+  const btn = document.getElementById('nav-hamburger');
+  const menu = document.getElementById('nav-mobile-menu');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+  }));
+</script>
+
+</body>
+</html>
