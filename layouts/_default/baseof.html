@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ if .IsHome }}ICCC Hub{{ else }}{{ .Title }} — ICCC Hub{{ end }}</title>
+<meta name="description" content="{{ with .Params.summary }}{{ . }}{{ else }}News and blog posts from Imperial College Cycling Club.{{ end }}">
+
+<!-- Favicon -->
+<link rel="icon" href="{{ "favicon.ico" | absURL }}">
+
+<!-- Fonts -->
+<link rel="preload" href="{{ "fonts/syne-700.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "fonts/inter-400.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="ICCC Hub">
+<meta property="og:title" content="{{ if .IsHome }}ICCC Hub{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ with .Params.summary }}{{ . }}{{ else }}News and blog posts from Imperial College Cycling Club.{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+{{ with .Params.og_image }}<meta property="og:image" content="{{ . | absURL }}">{{ else }}<meta property="og:image" content="{{ "og-image.jpg" | absURL }}">{{ end }}
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}ICCC Hub{{ else }}{{ .Title }}{{ end }}">
+<meta name="twitter:description" content="{{ with .Params.summary }}{{ . }}{{ else }}News and blog posts from Imperial College Cycling Club.{{ end }}">
+{{ with .Params.og_image }}<meta name="twitter:image" content="{{ . | absURL }}">{{ else }}<meta name="twitter:image" content="{{ "og-image.jpg" | absURL }}">{{ end }}
+
+<link rel="stylesheet" href="{{ "blog.css" | absURL }}">
+</head>
+<body>
+
+<nav>
+  <a href="{{ .Site.Params.mainSite }}" class="nav-logo">
+    <img src="{{ "ICCC.svg" | absURL }}" alt="ICCC" style="height:28px;width:auto;">
+  </a>
+  <ul class="nav-center">
+    <li><a href="{{ "posts/" | absURL }}"{{ if eq .Section "posts" }} class="active"{{ end }}>Blog</a></li>
+    <li><a href="{{ "news/" | absURL }}"{{ if eq .Section "news" }} class="active"{{ end }}>News</a></li>
+  </ul>
+  <a href="{{ .Site.Params.mainSite }}" class="nav-back">Back to ICCC</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile dropdown -->
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <a href="{{ "posts/" | absURL }}"{{ if eq .Section "posts" }} class="active"{{ end }}>Blog</a>
+  <a href="{{ "news/" | absURL }}"{{ if eq .Section "news" }} class="active"{{ end }}>News</a>
+  <a href="{{ .Site.Params.mainSite }}">← Back to ICCC</a>
+</div>
+
+{{ block "main" . }}{{ end }}
+
+<footer class="blog-footer">
+  <a href="{{ .Site.Params.mainSite }}" class="blog-footer-brand">
+    <img src="{{ "ICCC-white.svg" | absURL }}" alt="ICCC" style="height:22px;width:auto;opacity:0.55;">
+  </a>
+  <div class="blog-footer-links">
+    <a href="{{ "posts/" | absURL }}">Blog</a>
+    <a href="{{ "news/" | absURL }}">News</a>
+    <a href="{{ .Site.Params.mainSite }}">Main Website</a>
+    <a href="{{ .Site.Params.mainSite }}privacy.html">Privacy & Legal</a>
+  </div>
+  <span class="blog-footer-copy">© Imperial College Cycling Club {{ now.Year }}.</span>
+</footer>
+
+<script>
+  // Hamburger menu
+  const btn = document.getElementById('nav-hamburger');
+  const menu = document.getElementById('nav-mobile-menu');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  // Close on link click
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+  }));
+</script>
+
+</body>
+</html>

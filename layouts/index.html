@@ -1,0 +1,67 @@
+{{ define "main" }}
+<div class="blog-wrap">
+
+  <div class="list-header">
+    <div>
+      <h1>Hub</h1>
+      <p>Latest news and blog posts from Imperial College Cycling Club.</p>
+    </div>
+  </div>
+
+  <div class="nb-layout">
+
+    <div class="nb-news">
+      <div class="nb-col-label">
+        <span>Latest News</span>
+        <a href="{{ "news/" | absURL }}" class="text-link">All →</a>
+      </div>
+      <div class="nb-news-list">
+        {{/* Only show active (non-expired) news */}}
+        {{ $count := 0 }}
+        {{ range (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
+          {{ $expired := false }}
+          {{ with .Params.expires_on }}
+            {{ if lt (time .) now }}{{ $expired = true }}{{ end }}
+          {{ end }}
+          {{ if and (not $expired) (lt $count 6) }}
+          <a href="{{ .Permalink }}" class="nb-news-item">
+            <div class="news-date{{ with .Params.event_date }} event{{ end }}">{{ with .Params.event_date }}{{ . }}{{ else }}{{ .Date.Format "Jan 2006" }}{{ end }}</div>
+            <div class="nb-news-title">{{ .Title }}</div>
+          </a>
+          {{ $count = add $count 1 }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="nb-blog">
+      <div class="nb-col-label">
+        <span>From the Blog</span>
+        <a href="{{ "posts/" | absURL }}" class="text-link">All posts →</a>
+      </div>
+      <div class="nb-blog-grid">
+        {{ $posts := first 3 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+        {{ range $i, $p := $posts }}
+          {{ if eq $i 0 }}
+          <a href="{{ $p.Permalink }}" class="nb-blog-card nb-blog-featured">
+            <div class="nb-blog-tag">{{ index ($p.Params.tags | default (slice "")) 0 }}</div>
+            <div class="nb-blog-title">{{ $p.Title }}</div>
+            <p class="nb-blog-excerpt">{{ $p.Params.summary }}</p>
+            <div class="nb-blog-meta">{{ $p.Params.author }} · {{ $p.ReadingTime }} min read</div>
+          </a>
+          {{ else }}
+          <a href="{{ $p.Permalink }}" class="nb-blog-card">
+            <div class="nb-blog-tag">{{ index ($p.Params.tags | default (slice "")) 0 }}</div>
+            <div class="nb-blog-title">{{ $p.Title }}</div>
+            <p class="nb-blog-excerpt">{{ $p.Params.summary }}</p>
+            <div class="nb-blog-meta">{{ $p.Params.author }} · {{ $p.ReadingTime }} min read</div>
+          </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{{ end }}

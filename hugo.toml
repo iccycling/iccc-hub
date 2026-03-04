@@ -1,0 +1,8 @@
+baseURL = "https://iccycling.github.io/iccc-hub/"
+languageCode = "en-GB"
+title = "ICCC Hub"
+
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+
+[params]
+  mainSite = "https://iccycling.github.io/"

@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="blog-wrap narrow">
+
+  <header class="post-header">
+    {{ with .Params.tags }}
+    <span class="post-tag">{{ delimit . " · " }}</span>
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+    <div class="post-meta">
+      {{ with .Params.author }}
+      <a href="{{ "authors/" | absURL }}{{ . | urlize }}/">{{ . }}</a>
+      <span class="sep">·</span>
+      {{ end }}
+      <span>{{ .Date.Format "2 January 2006" }}</span>
+      <span class="sep">·</span>
+      <span>{{ .ReadingTime }} min read</span>
+    </div>
+  </header>
+
+  <article class="post-body">
+    {{ .Content }}
+  </article>
+
+  {{ partial "share-bar.html" . }}
+
+  <nav class="post-nav">
+    {{ with .PrevInSection }}
+    <a href="{{ .Permalink }}" class="post-nav-item prev">
+      <span class="post-nav-dir">Previous post</span>
+      <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+    {{ else }}
+    <div class="post-nav-item prev" style="opacity:0.3;pointer-events:none;">
+      <span class="post-nav-dir">Previous post</span>
+      <span class="post-nav-title">—</span>
+    </div>
+    {{ end }}
+    {{ with .NextInSection }}
+    <a href="{{ .Permalink }}" class="post-nav-item next">
+      <span class="post-nav-dir">Next post</span>
+      <span class="post-nav-title">{{ .Title }}</span>
+    </a>
+    {{ else }}
+    <div class="post-nav-item next" style="opacity:0.3;pointer-events:none;">
+      <span class="post-nav-dir">Next post</span>
+      <span class="post-nav-title">—</span>
+    </div>
+    {{ end }}
+  </nav>
+
+</div>
+{{ end }}

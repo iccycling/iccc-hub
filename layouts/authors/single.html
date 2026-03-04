@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="blog-wrap narrow">
+
+  <div class="author-header">
+    {{ with .Params.avatar }}
+    <img src="{{ . }}" alt="{{ $.Title }}" class="author-avatar"
+         onerror="this.style.display='none';document.getElementById('av-fb').style.display='flex';">
+    <div class="author-avatar-fallback" id="av-fb" style="display:none;">
+      {{ substr $.Title 0 1 }}{{ with index (split $.Title " ") 1 }}{{ substr . 0 1 }}{{ end }}
+    </div>
+    {{ else }}
+    <div class="author-avatar-fallback">
+      {{ substr .Title 0 1 }}{{ with index (split .Title " ") 1 }}{{ substr . 0 1 }}{{ end }}
+    </div>
+    {{ end }}
+    <div class="author-info">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.bio }}<p>{{ . }}</p>{{ end }}
+      <div class="author-links">
+        {{ with .Params.linkedin }}<a href="{{ . }}" target="_blank">LinkedIn</a>{{ end }}
+        {{ with .Params.email }}<a href="mailto:{{ . }}">Get in touch</a>{{ end }}
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:32px;">
+    <a href="{{ "posts/" | absURL }}" class="text-link">← All posts</a>
+  </p>
+
+</div>
+{{ end }}

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="blog-wrap">
+
+  <div class="list-header">
+    <div>
+      <h1>Blog</h1>
+      <p>Tips, ride reports, and cycling stories from ICCC members.</p>
+    </div>
+    <a href="{{ "news/" | absURL }}" class="text-link">News →</a>
+  </div>
+
+  <div class="blog-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <a href="{{ .Permalink }}" class="blog-list-item">
+      <span class="blog-list-tag">{{ index (.Params.tags | default (slice "")) 0 }}</span>
+      <div class="blog-list-body">
+        <span class="blog-list-title">{{ .Title }}</span>
+        {{ with .Params.summary }}<span class="blog-list-excerpt">{{ . }}</span>{{ end }}
+      </div>
+      <span class="blog-list-meta">{{ .Date.Format "2 Jan 2006" }}</span>
+    </a>
+    {{ end }}
+  </div>
+
+</div>
+{{ end }}

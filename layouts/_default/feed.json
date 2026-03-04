@@ -1,0 +1,41 @@
+{
+  "news": [
+    {{ $news := where .Site.RegularPages "Section" "news" }}
+    {{ $active := slice }}
+    {{ range $news.ByDate.Reverse }}
+      {{ $expired := false }}
+      {{ with .Params.expires_on }}
+        {{ if lt (time .) now }}{{ $expired = true }}{{ end }}
+      {{ end }}
+      {{ if not $expired }}
+        {{ $active = $active | append . }}
+      {{ end }}
+    {{ end }}
+    {{ range $i, $p := $active }}
+    {{ if $i }},{{ end }}
+    {
+      "title": {{ $p.Title | jsonify }},
+      "date": "{{ $p.Date.Format "2006-01-02" }}",
+      "dateLabel": "{{ $p.Date.Format "Jan 2006" }}",
+      {{ with $p.Params.event_date }}"eventDate": {{ . | jsonify }},{{ end }}
+      "url": "{{ $p.Permalink }}"
+    }
+    {{ end }}
+  ],
+  "posts": [
+    {{ $posts := (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+    {{ range $i, $p := first 3 $posts }}
+    {{ if $i }},{{ end }}
+    {
+      "title": {{ $p.Title | jsonify }},
+      "date": "{{ $p.Date.Format "2006-01-02" }}",
+      "dateLabel": "{{ $p.Date.Format "Jan 2006" }}",
+      "tag": {{ index ($p.Params.tags | default (slice "")) 0 | jsonify }},
+      "excerpt": {{ $p.Params.summary | default "" | jsonify }},
+      "author": {{ $p.Params.author | default "" | jsonify }},
+      "readingTime": {{ $p.ReadingTime }},
+      "url": "{{ $p.Permalink }}"
+    }
+    {{ end }}
+  ]
+}

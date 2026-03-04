@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="blog-wrap">
+
+  <div class="list-header">
+    <div>
+      <h1>News</h1>
+      <p>Ride announcements, event results, and club updates.</p>
+    </div>
+    <a href="{{ "posts/" | absURL }}" class="text-link">Blog →</a>
+  </div>
+
+  <div class="news-list">
+    {{/* Active news first */}}
+    {{ range .Pages.ByDate.Reverse }}
+      {{ $expired := false }}
+      {{ with .Params.expires_on }}
+        {{ if lt (time .) now }}{{ $expired = true }}{{ end }}
+      {{ end }}
+      {{ if not $expired }}
+      <a href="{{ .Permalink }}" class="news-list-item">
+        <span class="news-list-date">{{ with .Params.event_date }}<strong>{{ . }}</strong>{{ else }}{{ .Date.Format "Jan 2006" }}{{ end }}</span>
+        <span class="news-list-title">{{ .Title }}</span>
+        <span class="news-list-arrow">→</span>
+      </a>
+      {{ end }}
+    {{ end }}
+
+    {{/* Expired news below, greyed out but still clickable */}}
+    {{ range .Pages.ByDate.Reverse }}
+      {{ $expired := false }}
+      {{ with .Params.expires_on }}
+        {{ if lt (time .) now }}{{ $expired = true }}{{ end }}
+      {{ end }}
+      {{ if $expired }}
+      <a href="{{ .Permalink }}" class="news-list-item expired">
+        <span class="news-list-date">{{ .Date.Format "Jan 2006" }}</span>
+        <span class="news-list-title">{{ .Title }}</span>
+        <span class="news-list-arrow">→</span>
+      </a>
+      {{ end }}
+    {{ end }}
+  </div>
+
+</div>
+{{ end }}
