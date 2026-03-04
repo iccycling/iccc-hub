@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frederik Beck — ICCC Hub</title>
+<meta name="description" content="News and blog posts from Imperial College Cycling Club.">
+
+
+<link rel="icon" href="https://iccycling.github.io/iccc-hub/favicon.ico">
+
+
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/syne-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<meta property="og:site_name" content="ICCC Hub">
+<meta property="og:title" content="Frederik Beck">
+<meta property="og:description" content="News and blog posts from Imperial College Cycling Club.">
+<meta property="og:url" content="https://iccycling.github.io/iccc-hub/authors/frederik-beck/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Frederik Beck">
+<meta name="twitter:description" content="News and blog posts from Imperial College Cycling Club.">
+<meta name="twitter:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+
+<link rel="stylesheet" href="https://iccycling.github.io/iccc-hub/blog.css">
+</head>
+<body>
+
+<nav>
+  <a href="https://iccycling.github.io/" class="nav-logo">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC.svg" alt="ICCC" style="height:28px;width:auto;">
+  </a>
+  <ul class="nav-center">
+    <li><a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a></li>
+    <li><a href="https://iccycling.github.io/iccc-hub/news/">News</a></li>
+  </ul>
+  <a href="https://iccycling.github.io/" class="nav-back">Back to ICCC</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a>
+  <a href="https://iccycling.github.io/iccc-hub/news/">News</a>
+  <a href="https://iccycling.github.io/">← Back to ICCC</a>
+</div>
+
+
+<div class="blog-wrap narrow">
+
+  <div class="author-header">
+    
+    <div class="author-avatar-fallback">
+      FB
+    </div>
+    
+    <div class="author-info">
+      <h1>Frederik Beck</h1>
+      <p>Designed and built this website. Have a web project? Happy to hear from you — get in touch on LinkedIn.</p>
+      <div class="author-links">
+        <a href="https://de.linkedin.com/in/frederik-beck-284648b4" target="_blank">LinkedIn</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <p style="margin-top:32px;">
+    <a href="https://iccycling.github.io/iccc-hub/posts/" class="text-link">← All posts</a>
+  </p>
+
+</div>
+
+
+<footer class="blog-footer">
+  <a href="https://iccycling.github.io/" class="blog-footer-brand">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC-white.svg" alt="ICCC" style="height:22px;width:auto;opacity:0.55;">
+  </a>
+  <div class="blog-footer-links">
+    <a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a>
+    <a href="https://iccycling.github.io/iccc-hub/news/">News</a>
+    <a href="https://iccycling.github.io/">Main Website</a>
+    <a href="https://iccycling.github.io/privacy.html">Privacy & Legal</a>
+  </div>
+  <span class="blog-footer-copy">© Imperial College Cycling Club 2026.</span>
+</footer>
+
+<script>
+  
+  const btn = document.getElementById('nav-hamburger');
+  const menu = document.getElementById('nav-mobile-menu');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+  }));
+</script>
+
+</body>
+</html>

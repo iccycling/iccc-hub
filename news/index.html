@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News — ICCC Hub</title>
+<meta name="description" content="News and blog posts from Imperial College Cycling Club.">
+
+
+<link rel="icon" href="https://iccycling.github.io/iccc-hub/favicon.ico">
+
+
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/syne-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<meta property="og:site_name" content="ICCC Hub">
+<meta property="og:title" content="News">
+<meta property="og:description" content="News and blog posts from Imperial College Cycling Club.">
+<meta property="og:url" content="https://iccycling.github.io/iccc-hub/news/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="News">
+<meta name="twitter:description" content="News and blog posts from Imperial College Cycling Club.">
+<meta name="twitter:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+
+<link rel="stylesheet" href="https://iccycling.github.io/iccc-hub/blog.css">
+</head>
+<body>
+
+<nav>
+  <a href="https://iccycling.github.io/" class="nav-logo">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC.svg" alt="ICCC" style="height:28px;width:auto;">
+  </a>
+  <ul class="nav-center">
+    <li><a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a></li>
+    <li><a href="https://iccycling.github.io/iccc-hub/news/" class="active">News</a></li>
+  </ul>
+  <a href="https://iccycling.github.io/" class="nav-back">Back to ICCC</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a>
+  <a href="https://iccycling.github.io/iccc-hub/news/" class="active">News</a>
+  <a href="https://iccycling.github.io/">← Back to ICCC</a>
+</div>
+
+
+<div class="blog-wrap">
+
+  <div class="list-header">
+    <div>
+      <h1>News</h1>
+      <p>Ride announcements, event results, and club updates.</p>
+    </div>
+    <a href="https://iccycling.github.io/iccc-hub/posts/" class="text-link">Blog →</a>
+  </div>
+
+  <div class="news-list">
+    
+    
+      
+      
+        
+      
+      
+      <a href="https://iccycling.github.io/iccc-hub/news/endlich-laengere-tage/" class="news-list-item">
+        <span class="news-list-date"><strong>29. März 2026</strong></span>
+        <span class="news-list-title">Zeitumstellung — Endlich längere Tage</span>
+        <span class="news-list-arrow">→</span>
+      </a>
+      
+    
+      
+      
+      
+      <a href="https://iccycling.github.io/iccc-hub/news/hill-climb/" class="news-list-item">
+        <span class="news-list-date">Oct 2025</span>
+        <span class="news-list-title">University of London Hill Climb</span>
+        <span class="news-list-arrow">→</span>
+      </a>
+      
+    
+      
+      
+        
+      
+      
+    
+      
+      
+        
+      
+      
+    
+
+    
+    
+      
+      
+        
+      
+      
+    
+      
+      
+      
+    
+      
+      
+        
+      
+      
+      <a href="https://iccycling.github.io/iccc-hub/news/road-taster/" class="news-list-item expired">
+        <span class="news-list-date">Sep 2025</span>
+        <span class="news-list-title">Road Tasters Kick-off Ride &amp; Social</span>
+        <span class="news-list-arrow">→</span>
+      </a>
+      
+    
+      
+      
+        
+      
+      
+      <a href="https://iccycling.github.io/iccc-hub/news/welcome-fair/" class="news-list-item expired">
+        <span class="news-list-date">Sep 2024</span>
+        <span class="news-list-title">Welcome Fair — Come Find Us at the Stalls</span>
+        <span class="news-list-arrow">→</span>
+      </a>
+      
+    
+  </div>
+
+</div>
+
+
+<footer class="blog-footer">
+  <a href="https://iccycling.github.io/" class="blog-footer-brand">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC-white.svg" alt="ICCC" style="height:22px;width:auto;opacity:0.55;">
+  </a>
+  <div class="blog-footer-links">
+    <a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a>
+    <a href="https://iccycling.github.io/iccc-hub/news/">News</a>
+    <a href="https://iccycling.github.io/">Main Website</a>
+    <a href="https://iccycling.github.io/privacy.html">Privacy & Legal</a>
+  </div>
+  <span class="blog-footer-copy">© Imperial College Cycling Club 2026.</span>
+</footer>
+
+<script>
+  
+  const btn = document.getElementById('nav-hamburger');
+  const menu = document.getElementById('nav-mobile-menu');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+  }));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Write a Blog Post for ICCC — ICCC Hub</title>
+<meta name="description" content="A guide to writing and formatting blog posts for the ICCC Hub — covering Markdown syntax, images, videos, and frontmatter.">
+
+
+<link rel="icon" href="https://iccycling.github.io/iccc-hub/favicon.ico">
+
+
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/syne-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<meta property="og:site_name" content="ICCC Hub">
+<meta property="og:title" content="How to Write a Blog Post for ICCC">
+<meta property="og:description" content="A guide to writing and formatting blog posts for the ICCC Hub — covering Markdown syntax, images, videos, and frontmatter.">
+<meta property="og:url" content="https://iccycling.github.io/iccc-hub/posts/2026/how-to-write-a-blog-post/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Write a Blog Post for ICCC">
+<meta name="twitter:description" content="A guide to writing and formatting blog posts for the ICCC Hub — covering Markdown syntax, images, videos, and frontmatter.">
+<meta name="twitter:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+
+<link rel="stylesheet" href="https://iccycling.github.io/iccc-hub/blog.css">
+</head>
+<body>
+
+<nav>
+  <a href="https://iccycling.github.io/" class="nav-logo">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC.svg" alt="ICCC" style="height:28px;width:auto;">
+  </a>
+  <ul class="nav-center">
+    <li><a href="https://iccycling.github.io/iccc-hub/posts/" class="active">Blog</a></li>
+    <li><a href="https://iccycling.github.io/iccc-hub/news/">News</a></li>
+  </ul>
+  <a href="https://iccycling.github.io/" class="nav-back">Back to ICCC</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <a href="https://iccycling.github.io/iccc-hub/posts/" class="active">Blog</a>
+  <a href="https://iccycling.github.io/iccc-hub/news/">News</a>
+  <a href="https://iccycling.github.io/">← Back to ICCC</a>
+</div>
+
+
+<div class="blog-wrap narrow">
+
+  <header class="post-header">
+    
+    <span class="post-tag">Guide · Website</span>
+    
+    <h1>How to Write a Blog Post for ICCC</h1>
+    <div class="post-meta">
+      
+      <a href="https://iccycling.github.io/iccc-hub/authors/frederik-beck/">Frederik Beck</a>
+      <span class="sep">·</span>
+      
+      <span>1 January 2025</span>
+      <span class="sep">·</span>
+      <span>3 min read</span>
+    </div>
+  </header>
+
+  <article class="post-body">
+    <p>This post explains how to write and publish a blog post on the ICCC Hub. Everything is written in <strong>Markdown</strong> — a simple text format that Hugo converts to HTML automatically.</p>
+<h2 id="folder-structure">Folder Structure</h2>
+<p>Every post lives in its own folder under <code>content/posts/</code>. The main file must always be named <code>index.md</code>. Images go directly in the folder or in an <code>images/</code> subfolder.</p>
+<pre tabindex="0"><code>content/posts/
+└── my-post/
+    ├── index.md          ← must be named index.md
+    ├── cover.jpg
+    └── images/
+        ├── photo1.jpg
+        └── photo2.jpg
+</code></pre><p>Hugo generates the URL automatically from the folder name: <code>my-post</code> → <code>/posts/my-post/</code>. Use hyphens, no spaces or special characters.</p>
+<hr>
+<h2 id="frontmatter">Frontmatter</h2>
+<p>Every post starts with a frontmatter block at the top of <code>index.md</code>. Copy this template:</p>
+<pre tabindex="0"><code>---
+title: &#34;Your Post Title&#34;
+date: 2025-06-01
+author: &#34;Your Name&#34;
+tags: [&#34;Road&#34;, &#34;Beginners&#34;]
+summary: &#34;One sentence shown in the blog list and on the Hub.&#34;
+---
+</code></pre><ul>
+<li><code>title</code> — shown everywhere</li>
+<li><code>date</code> — controls sort order, format <code>YYYY-MM-DD</code></li>
+<li><code>author</code> — links to your author page if one exists under <code>content/authors/</code></li>
+<li><code>tags</code> — first tag shown as label on Hub and list</li>
+<li><code>summary</code> — shown as excerpt in blog list, keep it under 160 characters</li>
+</ul>
+<p>For <strong>news posts</strong>, you can also add an expiry date — the item will appear greyed out in the news list once it passes:</p>
+<pre tabindex="0"><code>expires: &#34;2025-10-02&#34;
+</code></pre><hr>
+<h2 id="headings">Headings</h2>
+<pre tabindex="0"><code>## H2 — Main section heading
+### H3 — Subsection
+#### H4 — Sub-subsection
+##### H5 — Label style (blue, uppercase)
+###### H6 — Subtle label (grey, uppercase)
+</code></pre><h2 id="h2--main-section-heading">H2 — Main section heading</h2>
+<h3 id="h3--subsection">H3 — Subsection</h3>
+<h4 id="h4--sub-subsection">H4 — Sub-subsection</h4>
+<h5 id="h5--label-style">H5 — Label style</h5>
+<h6 id="h6--subtle-label">H6 — Subtle label</h6>
+<hr>
+<h2 id="text-formatting">Text Formatting</h2>
+<pre tabindex="0"><code>**Bold text**
+*Italic text*
+~~Strikethrough~~
+`inline code`
+</code></pre><p><strong>Bold text</strong> — use for key terms and important points.
+<em>Italic text</em> — use for emphasis or titles.
+<code>inline code</code> — use for technical terms or file names.</p>
+<hr>
+<h2 id="lists">Lists</h2>
+<p>Unordered:</p>
+<pre tabindex="0"><code>- First item
+- Second item
+- Third item
+</code></pre><ul>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ul>
+<p>Ordered:</p>
+<pre tabindex="0"><code>1. First step
+2. Second step
+3. Third step
+</code></pre><ol>
+<li>First step</li>
+<li>Second step</li>
+<li>Third step</li>
+</ol>
+<hr>
+<h2 id="blockquote">Blockquote</h2>
+<pre tabindex="0"><code>&gt; This is a quote or callout. Use it for tips, warnings, or notable quotes.
+</code></pre><blockquote>
+<p>This is a quote or callout. Use it for tips, warnings, or notable quotes.</p>
+</blockquote>
+<hr>
+<h2 id="links">Links</h2>
+<pre tabindex="0"><code>[Link text](https://example.com)
+[Email us](mailto:cycle@imperial.ac.uk)
+</code></pre><p><a href="https://example.com">Link text</a> — opens in same tab.
+<a href="mailto:cycle@imperial.ac.uk">Email us</a> — opens mail client.</p>
+<hr>
+<h2 id="images">Images</h2>
+<p>Place images in your post folder or in an <code>images/</code> subfolder:</p>
+<pre tabindex="0"><code>content/posts/my-post/
+├── index.md
+└── images/
+    ├── richmond.jpg
+    └── richmond2.jpg
+</code></pre><p><strong>Without caption</strong> — standard Markdown, always full width:</p>
+<pre tabindex="0"><code>![Riding in Richmond Park](images/richmond.jpg)
+</code></pre><p><img src="images/richmond.jpg" alt="Riding in Richmond Park"></p>
+<p><strong>With caption</strong> — use the <code>fig</code> shortcode:</p>
+<pre tabindex="0"><code>{{&lt; fig src=&#34;images/richmond2.jpg&#34; caption=&#34;Richmond Park in January — cold but worth it&#34; &gt;}}
+</code></pre><figure class="post-figure" >
+  <img src="images/richmond2.jpg" alt="Richmond Park in January — cold but worth it">
+  
+  <figcaption>Richmond Park in January — cold but worth it</figcaption>
+  
+</figure>
+
+<p><strong>With caption and custom width</strong> — add a <code>width</code> parameter (always centred):</p>
+<pre tabindex="0"><code>{{&lt; fig src=&#34;images/richmond2.jpg&#34; caption=&#34;Detail shot&#34; width=&#34;50%&#34; &gt;}}
+</code></pre><figure class="post-figure" style="max-width:50%;margin-left:auto;margin-right:auto;">
+  <img src="images/detail-shot.jpg" alt="Detail shot">
+  
+  <figcaption>Detail shot</figcaption>
+  
+</figure>
+
+<p>Width accepts any CSS value: <code>50%</code>, <code>300px</code>, <code>40rem</code> etc.</p>
+<hr>
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+<p>Use <code>---</code> on its own line to create a divider.</p>
+<hr>
+<h2 id="embedding-a-youtube-video">Embedding a YouTube Video</h2>
+<p>Use the <code>yt</code> shortcode. Copy the video ID from the YouTube URL — it&rsquo;s the part after <code>v=</code>:</p>
+<pre tabindex="0"><code>https://www.youtube.com/watch?v=dQw4w9WgXcQ
+                                ^^^^^^^^^^^^ this part
+</code></pre><pre tabindex="0"><code>{{&lt; yt &#34;dQw4w9WgXcQ&#34; &#34;Video title for accessibility&#34; &gt;}}
+</code></pre><div class="video-wrap">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1"
+    title="Example YouTube video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<p>This uses <code>youtube-nocookie.com</code> — YouTube loads no tracking cookies until the viewer presses play.</p>
+
+  </article>
+
+  <div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fposts%2F2026%2Fhow-to-write-a-blog-post%2F&text=How&#43;to&#43;Write&#43;a&#43;Blog&#43;Post&#43;for&#43;ICCC" target="_blank" rel="noopener">X / Twitter</a>
+  <a class="share-btn" href="https://bsky.app/intent/compose?text=How&#43;to&#43;Write&#43;a&#43;Blog&#43;Post&#43;for&#43;ICCC%20https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fposts%2F2026%2Fhow-to-write-a-blog-post%2F" target="_blank" rel="noopener">Bluesky</a>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fposts%2F2026%2Fhow-to-write-a-blog-post%2F" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="share-btn" href="https://wa.me/?text=How&#43;to&#43;Write&#43;a&#43;Blog&#43;Post&#43;for&#43;ICCC%20https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fposts%2F2026%2Fhow-to-write-a-blog-post%2F" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="share-btn" id="copy-link-btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.textContent='Copied!';this.classList.add('copied');setTimeout(()=>{this.textContent='Copy link';this.classList.remove('copied')},2000)})">Copy link</button>
+</div>
+
+
+  <nav class="post-nav">
+    
+    <div class="post-nav-item prev" style="opacity:0.3;pointer-events:none;">
+      <span class="post-nav-dir">Previous post</span>
+      <span class="post-nav-title">—</span>
+    </div>
+    
+    
+    <a href="https://iccycling.github.io/iccc-hub/posts/2026/maintenance-guide/" class="post-nav-item next">
+      <span class="post-nav-dir">Next post</span>
+      <span class="post-nav-title">Website &amp; Blog Maintenance Guide</span>
+    </a>
+    
+  </nav>
+
+</div>
+
+
+<footer class="blog-footer">
+  <a href="https://iccycling.github.io/" class="blog-footer-brand">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC-white.svg" alt="ICCC" style="height:22px;width:auto;opacity:0.55;">
+  </a>
+  <div class="blog-footer-links">
+    <a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a>
+    <a href="https://iccycling.github.io/iccc-hub/news/">News</a>
+    <a href="https://iccycling.github.io/">Main Website</a>
+    <a href="https://iccycling.github.io/privacy.html">Privacy & Legal</a>
+  </div>
+  <span class="blog-footer-copy">© Imperial College Cycling Club 2026.</span>
+</footer>
+
+<script>
+  
+  const btn = document.getElementById('nav-hamburger');
+  const menu = document.getElementById('nav-mobile-menu');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+  }));
+</script>
+
+</body>
+</html>
