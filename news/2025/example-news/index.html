@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to create a News Post — ICCC Hub</title>
+<meta name="description" content="How to create a News Post">
+
+
+<link rel="icon" href="https://iccycling.github.io/iccc-hub/favicon.ico">
+
+
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/syne-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://iccycling.github.io/iccc-hub/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+
+
+<meta property="og:site_name" content="ICCC Hub">
+<meta property="og:title" content="How to create a News Post">
+<meta property="og:description" content="How to create a News Post">
+<meta property="og:url" content="https://iccycling.github.io/iccc-hub/news/2025/example-news/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to create a News Post">
+<meta name="twitter:description" content="How to create a News Post">
+<meta name="twitter:image" content="https://iccycling.github.io/iccc-hub/og-image.jpg">
+
+<link rel="stylesheet" href="https://iccycling.github.io/iccc-hub/blog.css">
+</head>
+<body>
+
+<nav>
+  <a href="https://iccycling.github.io/" class="nav-logo">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC.svg" alt="ICCC" style="height:28px;width:auto;">
+  </a>
+  <ul class="nav-center">
+    <li><a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a></li>
+    <li><a href="https://iccycling.github.io/iccc-hub/news/" class="active">News</a></li>
+  </ul>
+  <a href="https://iccycling.github.io/" class="nav-back">Back to ICCC</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<div class="nav-mobile-menu" id="nav-mobile-menu">
+  <a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a>
+  <a href="https://iccycling.github.io/iccc-hub/news/" class="active">News</a>
+  <a href="https://iccycling.github.io/">← Back to ICCC</a>
+</div>
+
+
+<div class="blog-wrap narrow">
+  <header class="post-header">
+    <span class="post-tag">News</span>
+    
+    <h1>How to create a News Post</h1>
+    <div class="post-meta">
+      
+      <span>Frederik Beck</span>
+      <span class="sep">·</span>
+      
+      <span>20 June 2025</span>
+    </div>
+  </header>
+
+
+  <article class="post-body">
+    <h1 id="how-to-create-a-news-post">How to Create a News Post</h1>
+<p>News posts work the same as blog posts, just under <code>content/news/</code> instead of <code>content/posts/</code>.</p>
+<h2 id="1-create-the-folder">1. Create the folder</h2>
+<pre tabindex="0"><code>content/news/my-news-item/
+├── index.md
+└── news.jpg
+</code></pre><h2 id="2-add-frontmatter">2. Add Frontmatter</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;Your News Title&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: <span style="color:#e6db74">2025-09-20</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">author</span>: <span style="color:#e6db74">&#34;Your Name&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">summary</span>: <span style="color:#e6db74">&#34;One sentence shown in the news list.&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">expires_on</span>: <span style="color:#e6db74">&#34;2025-10-05&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">event_date</span>: <span style="color:#e6db74">&#34;20. September 2025&#34;</span>
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><ul>
+<li><code>date</code> — publication date, must be today or in the past</li>
+<li><code>expires_on</code> — optional, item appears greyed out after this date</li>
+<li><code>event_date</code> — optional, shown prominently when the news is about a specific event. Always a quoted string in your preferred format.</li>
+</ul>
+<h2 id="3-write-content">3. Write content</h2>
+<p>Normal Markdown — headings, lists, bold text, links. For images use the <code>fig</code> shortcode:</p>
+<pre tabindex="0"><code>{{&lt; fig src=&#34;news.jpg&#34; caption=&#34;Newspaper (Source: Unsplash)&#34; &gt;}}
+</code></pre><figure class="post-figure" >
+  <img src="news.jpg" alt="Newspaper (Source: Unsplash)">
+  
+  <figcaption>Newspaper (Source: Unsplash)</figcaption>
+  
+</figure>
+
+<pre tabindex="0"><code>{{&lt; fig src=&#34;news2.jpg&#34; caption=&#34;Smartphone (Source: Unsplash)&#34; &gt;}}
+</code></pre><figure class="post-figure" >
+  <img src="news2.jpg" alt="Smartphone (Source: Unsplash)">
+  
+  <figcaption>Smartphone (Source: Unsplash)</figcaption>
+  
+</figure>
+
+<h2 id="4-test-and-deploy">4. Test and deploy</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>hugo server
+</span></span></code></pre></div><p>Open <code>http://localhost:1313/iccc-hub/news/</code> to check. Push to GitHub to deploy.</p>
+
+  </article>
+
+  <div class="share-bar">
+  <span class="share-label">Share</span>
+  <a class="share-btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fnews%2F2025%2Fexample-news%2F&text=How&#43;to&#43;create&#43;a&#43;News&#43;Post" target="_blank" rel="noopener">X / Twitter</a>
+  <a class="share-btn" href="https://bsky.app/intent/compose?text=How&#43;to&#43;create&#43;a&#43;News&#43;Post%20https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fnews%2F2025%2Fexample-news%2F" target="_blank" rel="noopener">Bluesky</a>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fnews%2F2025%2Fexample-news%2F" target="_blank" rel="noopener">LinkedIn</a>
+  <a class="share-btn" href="https://wa.me/?text=How&#43;to&#43;create&#43;a&#43;News&#43;Post%20https%3A%2F%2Ficcycling.github.io%2Ficcc-hub%2Fnews%2F2025%2Fexample-news%2F" target="_blank" rel="noopener">WhatsApp</a>
+  <button class="share-btn" id="copy-link-btn" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.textContent='Copied!';this.classList.add('copied');setTimeout(()=>{this.textContent='Copy link';this.classList.remove('copied')},2000)})">Copy link</button>
+</div>
+
+
+  <nav class="post-nav">
+    
+    <div class="post-nav-item prev" style="opacity:0.3;pointer-events:none;">
+      <span class="post-nav-dir">Previous</span>
+      <span class="post-nav-title">—</span>
+    </div>
+    
+    
+    <a href="https://iccycling.github.io/iccc-hub/news/2025/welcome-fair/" class="post-nav-item next">
+      <span class="post-nav-dir">Next</span>
+      <span class="post-nav-title">2025 Welcome Fair on campus</span>
+    </a>
+    
+  </nav>
+
+</div>
+
+
+<footer class="blog-footer">
+  <a href="https://iccycling.github.io/" class="blog-footer-brand">
+    <img src="https://iccycling.github.io/iccc-hub/ICCC-white.svg" alt="ICCC" style="height:22px;width:auto;opacity:0.55;">
+  </a>
+  <div class="blog-footer-links">
+    <a href="https://iccycling.github.io/iccc-hub/posts/">Blog</a>
+    <a href="https://iccycling.github.io/iccc-hub/news/">News</a>
+    <a href="https://iccycling.github.io/">Main Website</a>
+    <a href="https://iccycling.github.io/privacy.html">Privacy & Legal</a>
+  </div>
+  <span class="blog-footer-copy">© Imperial College Cycling Club 2026.</span>
+</footer>
+
+<script>
+  
+  const btn = document.getElementById('nav-hamburger');
+  const menu = document.getElementById('nav-mobile-menu');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+  }));
+</script>
+
+</body>
+</html>

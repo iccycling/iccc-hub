@@ -69,7 +69,7 @@
       
       <span>1 January 2025</span>
       <span class="sep">·</span>
-      <span>3 min read</span>
+      <span>4 min read</span>
     </div>
   </header>
 
@@ -97,13 +97,32 @@ summary: &#34;One sentence shown in the blog list and on the Hub.&#34;
 ---
 </code></pre><ul>
 <li><code>title</code> — shown everywhere</li>
-<li><code>date</code> — controls sort order, format <code>YYYY-MM-DD</code></li>
+<li><code>date</code> — controls sort order, format <code>YYYY-MM-DD</code>. <strong>Must be today or in the past</strong> — posts with a future date will not be rendered until that date arrives.</li>
 <li><code>author</code> — links to your author page if one exists under <code>content/authors/</code></li>
 <li><code>tags</code> — first tag shown as label on Hub and list</li>
 <li><code>summary</code> — shown as excerpt in blog list, keep it under 160 characters</li>
 </ul>
-<p>For <strong>news posts</strong>, you can also add an expiry date — the item will appear greyed out in the news list once it passes:</p>
-<pre tabindex="0"><code>expires: &#34;2025-10-02&#34;
+<h3 id="social-media-preview-image">Social Media Preview Image</h3>
+<p>By default, all posts use a shared fallback image when shared on social media. To use a specific image for a post, add <code>og_image</code> to the frontmatter pointing to an image in your post folder:</p>
+<pre tabindex="0"><code>---
+title: &#34;Your Post Title&#34;
+date: 2025-06-01
+og_image: &#34;images/preview.jpg&#34;
+---
+</code></pre><p>If omitted, the default <code>og-image.jpg</code> from <code>static/</code> is used.</p>
+<h3 id="news-posts">News Posts</h3>
+<p>For <strong>news posts</strong> under <code>content/news/</code>, two additional fields are available:</p>
+<p><strong>Expiry date</strong> — the item appears greyed out in the news list once it passes:</p>
+<pre tabindex="0"><code>expires_on: &#34;2025-10-02&#34;
+</code></pre><p><strong>Event date</strong> — use this when the news item is about a specific event on a specific date. It will be displayed prominently in the news list and at the top of the post:</p>
+<pre tabindex="0"><code>event_date: &#34;29. März 2026&#34;
+</code></pre><p>Always write <code>event_date</code> as a string in quotes, in whatever format you want displayed. Example of a full news frontmatter:</p>
+<pre tabindex="0"><code>---
+title: &#34;Zeitumstellung — Endlich längere Tage&#34;
+date: 2026-02-25
+event_date: &#34;29. März 2026&#34;
+expires_on: &#34;2026-04-30&#34;
+---
 </code></pre><hr>
 <h2 id="headings">Headings</h2>
 <pre tabindex="0"><code>## H2 — Main section heading

@@ -3,10 +3,105 @@
     
     
     
+      
+      
+        
+      
+      
+        
+      
+    
+      
+      
+        
+      
+      
+    
+      
+      
+        
+      
+      
+    
+      
+      
+        
+      
+      
+    
+      
+      
+        
+      
+      
+    
+      
+      
+        
+      
+      
+    
+      
+      
+        
+      
+      
+    
+      
+      
+        
+      
+      
+    
+    
+    
+    {
+      "title": "Spring is Here — Cycling Season Starts Now",
+      "date": "2026-03-05",
+      "dateLabel": "Mar 2026",
+      "eventDate": "29 March",
+      "url": "https://iccycling.github.io/iccc-hub/news/2026/spring-is-here/"
+    }
     
   ],
   "posts": [
     
+    
+    
+    {
+      "title": "The ICCC Website Got a Makeover",
+      "date": "2026-03-05",
+      "dateLabel": "Mar 2026",
+      "tag": "Website",
+      "excerpt": "The ICCC website has a new design. A small contribution to making cycling at Imperial a little more stylish — we are in South Kensington, after all.",
+      "author": "Frederik Beck",
+      "readingTime": 1,
+      "url": "https://iccycling.github.io/iccc-hub/posts/2026/design-update-for-website/"
+    }
+    
+    ,
+    {
+      "title": "New Logos for ICCC",
+      "date": "2026-03-03",
+      "dateLabel": "Mar 2026",
+      "tag": "Club Logo",
+      "excerpt": "ICCC has new logos. The old coat of arms had a good run — but a cycling club in 2026 probably shouldn't look like a medieval guild.",
+      "author": "Frederik Beck",
+      "readingTime": 2,
+      "url": "https://iccycling.github.io/iccc-hub/posts/2026/new-logo/"
+    }
+    
+    ,
+    {
+      "title": "Which Bike Should You Choose as a Beginner?",
+      "date": "2025-06-19",
+      "dateLabel": "Jun 2025",
+      "tag": "Beginners",
+      "excerpt": "A beginner's guide to choosing the right bike, covering frame materials, sizes, types, and budget considerations.",
+      "author": "Frederik Beck",
+      "readingTime": 3,
+      "url": "https://iccycling.github.io/iccc-hub/posts/2025/beginners-roadbike-advice/"
+    }
     
   ]
 }
