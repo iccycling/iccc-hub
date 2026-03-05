@@ -2,32 +2,31 @@
 title: "Bike Washing, Maintenance & Care"
 date: 2025-06-10
 author: "Frederik Beck"
-draft: false
 og_image: "wash-bike-unsplash.jpg"
 summary: "Practical tips for cleaning, maintaining, and caring for your bike, including chain lubrication and basic repairs."
 tags: ["Bike"]
 ---
 
-Let's face it—cleaning your bike is one of those tasks that often gets neglected, especially if you don’t have access to a hose or yard. If you're stuck in student housing without outdoor space, washing becomes tricky. One simple solution: limit your rides to dry days. This alone can significantly reduce how often you need to clean your bike.
+Cleaning your bike is one of those tasks that gets neglected — especially in student housing without outdoor space or a hose. The simplest solution is also the most obvious: ride on dry days when you can. It won't always be possible in London, but it significantly reduces how often a proper wash is needed.
 
-If you're unsure about how to wash your bike properly, we recommend checking out this:
+If you're unsure where to start with washing, this video covers the basics well:
+
 {{< yt "DifcPmKyPYs" "How to wash your bike" >}}
 
+A basic all-purpose household cleaner works fine for the frame and components. The one thing to watch out for: keep any cleaning product or lubricant well away from your disc brake rotors and pads. Even a small amount of contamination can seriously affect braking performance.
 
+{{< fig src="wash-bike-unsplash.jpg" caption="A clean bike is a happy bike." >}}
 
-For cleaning, a basic all-purpose household cleaner will do the job. However, be extra careful around your disc brakes—getting any oil on them can ruin braking performance.
+## Chain Care
 
-Chain cleaning is a bit of a controversial topic. While degreasers will get your chain spotless, some argue they can strip away the internal lubrication. For lubrication, stick with a simple chain oil. Avoid heavy-duty products for very wet conditions — they contain Teflon, which is both environmentally unfriendly and messy. Once applied, it’s almost impossible to clean off.
+Chain cleaning is a mildly controversial topic. Degreasers do a thorough job, but some argue they penetrate the inner links and remove factory lubrication that's difficult to replace. A reasonable middle ground: use a degreaser occasionally for a deep clean, and top up regularly with a simple chain oil.
 
-Other than that, you don’t need fancy care products. Less is often more.
+Avoid heavy-duty wet lubes — they often contain PTFE (Teflon), which is environmentally problematic and almost impossible to clean off once applied. A basic chain oil does the job well in most conditions. You may need to reapply more often, but that's a small price to pay.
 
-![Clean bike on a sunny day](wash-bike-unsplash.jpg)
-
-
+Less is more with lubrication. Apply to the chain, let it soak in, and wipe off the excess. Oil on the outside of the chain just collects dirt.
 
 ## Maintenance & Repairs
 
-With a bit of mechanical intuition, most bike repairs can be done yourself. YouTube is full of great tutorials. While we can’t offer a full repair service, we’re always happy to offer advice or help if we can.
+Most basic repairs are well within reach with a bit of patience and YouTube. Punctures, brake adjustments, cable replacements — there are good tutorials for all of it. We can't offer a full workshop service, but if you're stuck, feel free to ask.
 
-> **Tip:** Use isopropanol to remove oil or grease residues from brake discs or other sensitive parts. Isopropanol evaporates cleanly, is less aggressive for the environment and the user than conventional brake cleaners, and is safe on many materials like metal, aluminum, or steel when used sparingly. After cleaning, let the parts dry briefly. Wear **nitrile gloves**, as they are more chemical-resistant than latex and provide better protection against oils, solvents, and isopropanol.
-
+> **Tip:** For removing oil or grease from brake discs and other sensitive parts, isopropanol is a better choice than conventional brake cleaner — it evaporates cleanly, is less aggressive on materials and the environment, and is safe on metal and aluminium when used sparingly. Let parts dry briefly before riding. Wear nitrile gloves — they handle oils and solvents better than latex.
