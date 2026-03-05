@@ -8,7 +8,7 @@ summary: "The ICCC website has a new design. A small contribution to making cycl
 
 The ICCC website has a new design. Here's what changed and why.
 
-{{< fig src="preview-card.jpg" caption="The new ICCC website — designed for South Kensington." >}}
+{{< fig src="preview-card.jpg" caption="The new ICCC website." >}}
 
 ## What's New
 
@@ -18,7 +18,7 @@ The ICCC website has a new design. Here's what changed and why.
 
 **A blog and news hub.** You're reading it right now. Posts on training, gear, bike setup, and club life — written by members, for members. The hub also feeds live into the main site, so the homepage always shows what's current.
 
-**Mobile-first layout.** Because nobody is sitting at a desktop when they're trying to figure out if Sunday's ride is still on.
+**Mobile-first layout.**
 
 {{< fig src="mobile-first.png" caption="The ICCC homepage on mobile." width="40%" >}}
 
