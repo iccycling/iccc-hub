@@ -2,42 +2,39 @@
 title: "Essential Road Cycling Clothing and Where to Buy"
 date: 2025-06-18
 author: "Frederik Beck"
-draft: false
 og_image: "cyle-outfit.jpg"
 summary: "A beginner-friendly guide to essential road cycling clothing, safety gear, and where to purchase them."
 tags: ["Beginners", "Clothing"]
 ---
 
-
-
-When hitting the road on your bike, having the right clothing is just as important as having the right bike – for comfort, safety, and performance. Here’s a quick guide on what you really need and where to find it.
+Having the right kit makes a real difference on the bike — not just for comfort, but for safety and performance too. Here's what you actually need as a beginner, and where to find it without overspending.
 
 ## Helmet and Glasses: Safety First
 
-The bike helmet is your most important safety accessory. Designs and technology have come a long way, making helmets both protective and stylish. Trusted brands like Abus, Kask, Rudy Project, Giro, and Specialized offer certified models. It’s important the helmet fits well, so buying from a specialist store is recommended. Used helmets are not advised due to material fatigue risks. You can usually find the production date inside the helmet.
+A well-fitting helmet is non-negotiable. Designs have come a long way — modern helmets are both protective and genuinely good-looking. Trusted brands include Abus, Kask, Rudy Project, Giro, and Specialized. Buy from a specialist store where someone can check the fit properly. Avoid used helmets — the foam liner degrades over time and impact damage isn't always visible. The production date is usually printed inside.
 
-Sport sunglasses not only add style but also protect your eyes from insects and debris that can fly into your face while riding. For beginners, simple sport or lab glasses like Uvex work perfectly fine.
+Sport sunglasses protect your eyes from insects, debris, and UV — and they add a bit of style too. For beginners, simple sport or safety glasses like Uvex are perfectly fine and very affordable.
 
-![Early morning meetup](cyle-outfit.jpg)
+{{< fig src="cyle-outfit.jpg" caption="Early morning kit check." >}}
 
 ## Clothing: Comfort for Long Rides
 
-The bib shorts with padding are the core of cycling clothing, providing comfort on longer rides. Pair them with a breathable cycling jersey featuring handy rear pockets.
+Padded bib shorts are the single most important piece of cycling clothing. They make long rides significantly more comfortable — wear them without underwear. Pair them with a breathable cycling jersey with rear pockets for food, a phone, and a spare tube.
 
-For changeable weather, a lightweight rain jacket is recommended. Jackets with PTFE membranes are waterproof and breathable, but the material is controversial due to environmental concerns. We suggest opting for simpler jackets with PU coatings instead — less functional but more sustainable.
+For changeable British weather, a lightweight rain jacket is worth having. Jackets with PTFE membranes are highly waterproof and breathable but environmentally controversial. A simpler PU-coated jacket is a more sustainable choice and works well for most conditions.
 
-For cooler days, baselayers or functional shirts are useful, for example from Decathlon Kipsta. You can also add long cycling tights, leg warmers, and warm long-sleeve jerseys or jackets. Gloves protect your hands from abrasions in summer and keep them warm in winter.
+For cooler rides, a base layer makes a big difference. Arm warmers and leg warmers are more versatile than dedicated long-sleeve jerseys — you can pack them away mid-ride. Gloves protect your hands from road rash in summer and from the cold in winter.
 
 ## Cycling Shoes: Efficiency and Control
 
-Once you’re beyond the beginner stage, you’ll quickly realize the importance of cycling shoes. Connected to clipless pedals (cleats), they allow for more efficient power transfer. The Shimano SPD-MTB system is a great choice for beginners since the shoes have tread, allowing you to walk comfortably off the bike.
+Once you're past the beginner stage, clipless pedals and dedicated cycling shoes are worth considering. They attach to the pedal via a cleat on the sole, allowing for more efficient power transfer through the full pedal stroke. The Shimano SPD-MTB system is a good starting point — the shoes have a recessed cleat and proper tread, so you can walk normally off the bike.
 
-## Where to Shop?
+## Where to Shop
 
-Decathlon offers great value-for-money cycling clothing for beginners.
+**Decathlon** is the obvious starting point — good quality, low prices, and a wide range for beginners. Their own brands (Van Rysel, Triban, B'Twin) offer solid value.
 
-You can also find good deals on secondhand platforms like Vinted or Amazon. Just make sure to choose established cycling brands such as Castelli, Sportful, Nalini, Kalas, Craft, Etxeondo, Biehler, Assos, Alé, Gobik, Bioracer, Santini, dhb, Van Rysel, B'Twin, Triban and others — functionality is key.
+For secondhand kit, **Vinted** and **eBay** are worth checking. Stick to established cycling brands: Castelli, Sportful, Assos, Kalas, Craft, Nalini, Etxeondo, Biehler, Alé, Gobik, Bioracer, Santini, dhb — functionality matters more than brand prestige, but these names are a reliable indicator of quality.
 
-## Club Kits
+## Club Kit
 
-Our club also offers its own kits...
+ICCC offers its own club kit — keep an eye on the news section for kit drops and ordering windows.
