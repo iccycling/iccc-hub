@@ -2,79 +2,51 @@
 title: "Which Bike Should You Choose as a Beginner?"
 date: 2025-06-19
 author: "Frederik Beck"
-draft: false
-
+og_image: "roadbike-2.jpg"
 summary: "A beginner's guide to choosing the right bike, covering frame materials, sizes, types, and budget considerations."
 tags: ["Beginners"]
 ---
 
-
-
-When you're new to cycling, it’s tempting to go straight for the sleek carbon bikes you see in races and ads. But here’s the truth: **aluminum is your friend** when you’re starting out.
+When you're new to cycling, it's tempting to go straight for the carbon bikes you see in races and ads. The truth is, starting on aluminium is almost always the better choice.
 
 ## Why Not Carbon?
 
-Carbon frames offer incredible performance, no doubt. But carbon is a more brittle material and not ideal if you're still developing your handling skills or learning how to care for a bike. A crash, a fall, or even overtightening a clamp can damage a carbon frame. **Modern aluminum frames**, on the other hand, are excellent in quality, far more forgiving, and often cheaper.
+Carbon frames are impressive, but carbon is a brittle material — not ideal when you're still developing your handling skills or learning how to care for a bike. A crash, a clumsy lean against a wall, or even overtightening a clamp can cause damage that's expensive to repair and difficult to spot. Modern aluminium frames are excellent in quality, far more forgiving, and typically cheaper.
 
-**Steel frames?** They're charming and durable but heavy. Not ideal for road cycling or performance riding.
+Steel frames are durable and have a certain appeal, but they're heavy — not ideal for road cycling or performance riding.
 
-Also, avoid bikes that are too old. Besides wear and tear, **technology in bikes has evolved rapidly**, making newer models safer, lighter, and more efficient.
+Whichever material you go for, avoid bikes that are too old. Technology has moved on significantly, and newer bikes are lighter, safer, and more reliable.
 
-![Roadbike](roadbike-2.jpg)
+{{< fig src="roadbike-2.jpg" caption="A modern aluminium road bike — more than enough for most riders." >}}
 
-## Frame Size & Setup
+## Frame Size
 
-Getting the **right frame size** is crucial. A bike that’s too big or too small will be uncomfortable and inefficient. If in doubt, most major brands (like Canyon or Giant) offer **online size calculators**.
-
-One great example of a beginner-friendly setup is the **Canyon Endurace AllRoad** – modern geometry, solid components, and a trusted manufacturer.
+Getting the right frame size matters more than any component upgrade. A bike that doesn't fit will be uncomfortable, inefficient, and harder to handle. Most major brands offer online size calculators — use them, and if in doubt, go to a shop and sit on a few bikes before committing.
 
 ## Buying on a Budget
 
-If you're on a tight budget, here’s where you can safely save money:
+There are sensible places to save money as a beginner:
 
-- **Rim brakes** instead of disc brakes
+- **Rim brakes** instead of disc brakes — perfectly functional and easier to maintain
 - **Quick-release wheels** instead of thru-axles
 - **Used bikes** from trusted sellers
 
-Look for a used bike with:
+If you're buying used, look for a reputable brand (Canyon, Scott, Trek, Specialized, Giant, Cube, BMC, Cannondale, Ribble), an aluminium frame, and a Shimano 105 or Ultegra drivetrain — or SRAM equivalent. Check for cracks, rust, and worn drivetrain parts. If you're not sure what to look for, bring someone who does. What looks like a bargain can quickly become an expensive repair project.
 
-- A **reputable brand** (e.g., Canyon, Scott, Trek, Specialized, Giant, Cube, BMC, Cannondale, Ribble, etc.)
-- **Aluminum frame**
-- **Shimano 105 or Ultegra** drivetrain (or CUES/SRAM equivalent)
-- **Good condition**, no cracks, rust, or worn-out drivetrain parts
+The upside: quality bikes hold their value well, so resale is always an option if you change direction.
 
-If you’re unsure, ask a knowledgeable friend to help evaluate the bike. Buying used without experience is risky, and what looks like a bargain can quickly turn into an expensive repair project.
+## Road, Gravel, or MTB?
 
-The good news: **quality bikes hold their value well**, so resale is always an option.
+**Endurance road bikes** have a relaxed, upright geometry — comfortable for longer rides and more forgiving than race-oriented frames. A good starting point for most riders. Race geometry is aggressive and better suited to experienced, flexible riders.
 
-### Road, Gravel, or MTB?
+**Gravel bikes** are versatile — they handle tarmac, gravel, and light trails. Popular right now, and genuinely useful if you want one bike for varied terrain and commuting.
 
-This is where many get stuck. So here’s a quick guide:
+**Hardtail MTB** is worth considering if you're on a tight budget or want something that doubles as a commuter. Robust, forgiving, works on trails and city roads. The downsides: heavier, less aerodynamic, and slower on group road rides.
 
-### Endurance vs Race Road Bikes
-
-- **Endurance** geometry is more relaxed and beginner-friendly.
-- **Race** geometry is aggressive and not ideal for long rides if you're not flexible or experienced.
-
-#### Gravel Bikes
-
-Gravel bikes are the trendy "do-it-all" machines. They ride well on tarmac, gravel, and light trails. Great for adventure, commuting, and training.
-
-### Hardtail MTB – The Sleeper Pick
-
-For those on a tight budget or who want one bike for many uses, a **hardtail mountain bike** is a solid choice:
-
-- Robust and forgiving (no delicate carbon fork)
-- Works for commuting, XC rides, gravel paths, and even mild trails
-- Easy to find high-quality models at low prices, especially used
-- Higher handlebar position = better visibility and control in traffic
-
-**Downsides:** heavier, less aerodynamic, and slower on group road rides. Still, a great way to start the sport without breaking the bank.
-
-> *Personally, I’d pick a road bike or XC MTB over a gravel bike, but it’s really a lifestyle choice at the end of the day.*
+> Personally, I'd lean towards a road bike or XC hardtail over a gravel bike — but it really comes down to where and how you want to ride.
 
 ## Final Thoughts
 
-Buying a new bike is one of the most exciting parts of getting into cycling – but it’s easy to overthink. Go for a reliable, modern aluminum bike that fits your budget and riding style. Don’t get caught up in the hype around gear and accessories.
+Don't overthink it. A reliable, modern aluminium bike that fits your budget and riding style will serve you well. The best bike is the one you actually ride.
 
-Need help? We’re happy to assist you in finding the right bike.
+If you're unsure, feel free to reach out — happy to help you figure out what makes sense for your situation.
