@@ -2,56 +2,52 @@
 title: "Is Bike Fitting Really That Precise?"
 date: 2025-06-13
 author: "Frederik Beck"
-draft: false
 og_image: "jordan-0TPSP3L6RmA-unsplash.jpg"
 summary: "Bike fitting myths and practical advice for beginners — how to adjust your saddle, handlebars, and cleats safely."
-tags: ["Bike Fitting", "Bikes"]
+tags: ["Bike Fitting"]
 ---
 
-In recent years, bike fitting has developed into a full-blown industry — often accompanied by bold claims that your bike must be set up with millimeter precision. But is this really true?
+Bike fitting has become a full-blown industry in recent years, often accompanied by claims that your position must be dialled in to the millimetre. It's worth being sceptical of that.
 
-We don’t think so. In fact, there are **no universal reference points** that could justify such surgical-level adjustments. Bike fit is highly individual and dynamic: you don’t ride in a lab — you ride on the road, adjusting your posture constantly, especially as fatigue sets in.
+There are no universal reference points that justify surgical-level adjustments. Fit is highly individual and dynamic — you don't ride in a lab, you ride on the road, shifting position constantly, especially as fatigue sets in.
 
-![Expensive road bike](jordan-0TPSP3L6RmA-unsplash.jpg)
+{{< fig src="jordan-0TPSP3L6RmA-unsplash.jpg" caption="Position matters — but within a range, not a single point." >}}
 
-## The Myth of Millimeter-Perfect Fit
+## The Myth of Millimetre-Perfect Fit
 
-Turn on any professional cycling race, and you’ll notice it: even the pros often sit slightly crooked or shift position as they tire. The idea that there is one “correct” static position doesn’t hold up in the real world. Instead, **bike fit exists within a window** of acceptable parameters — not a single point.
+Watch any professional race and you'll notice that even elite riders sit slightly asymmetrically or change position as they tire. There is no single "correct" static position. Fit exists within a window of acceptable parameters — the goal is to find something comfortable and sustainable within that range.
 
-That’s why, especially for beginners, it’s not worth spending large sums of money on an elaborate professional fitting. Your body needs time to adapt to cycling in general before an optimized fit can be meaningful. An exception might be for time trial setups, where extreme aero positions justify professional attention.
+For beginners, an elaborate professional fitting is rarely worth the cost. Your body needs time to adapt to cycling before an optimised position can even be meaningful. The exception is time trial or triathlon setups, where extreme aero positions genuinely benefit from professional attention.
 
-## Practical Bike Fit Advice
+## Practical Advice
 
-- **Saddle angle:** Keep it flat or slightly tilted forward. Avoid excessive tilt in either direction. Use a smartphone level app to measure.  
-- **Saddle height:** Slightly too low is better than too high. A high saddle leads to hip instability and lost efficiency.  
-- **Knee over pedal axle:** This is a very rough guideline and not a strict rule — listen to your body.  
-- **Sliding on the saddle:** If you’re sliding forward or backward constantly, try adjusting saddle position accordingly.  
-- **Reach to the handlebar:** If you feel overstretched, your frame might be too large — but sometimes a shorter stem is enough.  
-- **Handlebar drop (saddle-to-bar height difference):** Beginners should keep it low — no more than 0–5cm initially.  
-- **Cleat position:** Set them symmetrically and slightly farther back rather than too far forward.  
+- **Saddle angle** — flat or very slightly nose-down. Avoid strong tilt in either direction. A smartphone level app works well for this.
+- **Saddle height** — slightly too low is better than too high. A saddle that's too high causes hip rocking and long-term knee problems.
+- **Knee over pedal axle** — a rough guideline, not a strict rule. Use it as a starting point and adjust based on feel.
+- **Sliding on the saddle** — if you're constantly sliding forward or back, adjust the fore-aft position accordingly.
+- **Reach** — if you feel overstretched, the frame may be too large, but a shorter stem often solves it.
+- **Handlebar drop** — a lower bar position offers aerodynamic advantages but creates a lot of additional difficulites. Even in professional cycling, the trend has moved towards less drop in recent years. Start with bars close to saddle height.
+- **Cleat position** — set symmetrically, slightly further back than the ball of the foot rather than forward.
 
 ## Comfort Takes Time
 
-Feeling uncomfortable at first is normal. You need to build proper pedaling technique and muscular adaptation. Indoor bikes (like Wattbikes at the gym) are a great way to practice form and make gradual changes.
+Some discomfort early on is normal — your body needs time to adapt to the position and the demands of pedalling. Indoor bikes like Wattbikes are useful here: a controlled environment to experiment with position and build technique without the variables of the road.
 
-> Listen to your body. Small aches can be normal; sharp pain or numbness should never be ignored.
+> Small aches during adaptation are normal. Sharp pain or numbness is not — don't ignore it.
 
-## Handling Discomfort
+## Handling Specific Problems
 
-- **Saddle pain:** If it’s on the sit bones, that’s usually harmless. Try different shorts, saddle shapes, or just give your body time.  
-- **Soft tissue pain:** Be cautious. If there's no relief with adjustments, stop training and reassess.  
-- **Back or neck pain:** This often reflects weak supporting muscles. Targeted strength training can help significantly.  
-- **Knee pain or other joint issues:** These can have many causes — don’t hesitate to consult a physiotherapist if problems persist.  
+- **Sit bone pain** — usually harmless in the early weeks. Try different shorts, give it time, or experiment with saddle shape.
+- **Soft tissue pain** — take it seriously. If adjustments don't help, stop and reassess before it becomes a bigger problem.
+- **Back or neck pain** — often a sign of weak supporting muscles rather than a fit problem. Targeted strength work helps more than endless position tweaks.
+- **Knee pain** — many possible causes. If it persists, see a physiotherapist rather than guessing.
 
 ## Watch: Practical Bike Fitting Tips
+
 {{< yt "4qL9ijQutn0" "Practical Bike Fitting Tips" >}}
 
 ---
 
-## Can We Help You with Bike Fitting?
+## Can We Help?
 
-Absolutely. If you're just starting out, our cycling club can support you with basic bike setup advice — no overcomplication, just practical tips based on experience.
-
-Remember, **comfort, adaptation, and consistency** are more important than finding a “perfect” setting from day one. You and your bike will grow together.
-
-
+If you're just starting out and want some basic setup advice, feel free to reach out. No overcomplication — just practical tips based on experience. Comfort, adaptation, and consistency matter far more than finding a perfect position from day one.
