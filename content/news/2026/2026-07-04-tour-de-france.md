@@ -2,7 +2,7 @@
 
 title: "Tour de France Time!"
 
-date: 2026-07-04
+date: 2026-07-02
 
 event_date: "4 July"
 
