@@ -11,13 +11,13 @@ summary: "The current ICCC jersey has served us well — but it might be time to
 
 {{< fig src="screenshot.png" caption="The current ICCC jersey (manufacturer rendering by Kalas, not an actual photo)" >}}
 
-Here's the honest take: it doesn't quite work anymore, and it's worth explaining why.
+Here's the honest take: it doesn't quite work anymore, and here's why.
 
-The fine horizontal stripes across the chest closely resemble the UCI rainbow bands — with one extra stripe on top. Combined with several colours packed into a small area, it reads as busy rather than bold. The stripe below the chest visually cuts the jersey in half — a stiff, traditional break that doesn't sit well with the dynamic, clean lines you'd expect from a modern cycling kit.
+The thin horizontal stripes on the chest look a lot like the UCI rainbow bands — and we even have one stripe more. On top of that, there are too many colours packed into a small space, so it looks busy instead of bold. The band below the chest cuts the jersey visually in half. That feels stiff and too traditional, not like the clean, dynamic look you'd expect from a modern cycling kit.
 
-The colour choice traces back to the official Imperial College scarf — itself six colours, none of which is actually Imperial's own blue. That means the jersey is built from seven colours in total, none of which is the one colour most associated with the university today. That's simply too much to reconcile into one coherent design.
+The colours come from the official Imperial College scarf. That scarf already has six colours — and none of them is Imperial's actual blue. So the jersey ends up using seven colours in total, and still misses the one colour people actually associate with the university. That's simply too many colours to turn into a good design.
 
-There's also a structural mismatch: the scarf's stripes are elegant, longitudinal bands that run with the body. Translating that heritage into small horizontal stripes that cut across the jersey loses exactly what made the original pattern work.
+There's also a structural mismatch: the scarf's stripes are elegant, longitudinal bands that run with the body. Translating that heritage into horizontal stripes that cut across the jersey loses exactly what made the original pattern work.
 
 ## Why Electric Blue
 
