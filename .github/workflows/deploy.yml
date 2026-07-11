@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -18,9 +19,17 @@ jobs:
           hugo-version: '0.157.0'
           extended: true
 
-      - run: hugo
+      - name: Clean Hugo cache
+        run: |
+          rm -rf public
+          rm -rf resources/_gen
+
+      - name: Build Hugo
+        run: |
+          hugo --gc --minify
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          force_orphan: true
