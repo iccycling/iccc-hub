@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bike on ICCC Hub</title><link>https://iccycling.github.io/iccc-hub/tags/bike/</link><description>Recent content in Bike on ICCC Hub</description><generator>Hugo</generator><language>en-GB</language><lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://iccycling.github.io/iccc-hub/tags/bike/index.xml" rel="self" type="application/rss+xml"/><item><title>Bike Washing, Maintenance &amp; Care</title><link>https://iccycling.github.io/iccc-hub/posts/2025/bike-maintainance/</link><pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate><guid>https://iccycling.github.io/iccc-hub/posts/2025/bike-maintainance/</guid><description>Practical tips for cleaning, maintaining, and caring for your bike, including chain lubrication and basic repairs.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bike on ICCC Hub</title>
+    <link>https://iccycling.github.io/iccc-hub/tags/bike/</link>
+    <description>Recent content in Bike on ICCC Hub</description>
+    <generator>Hugo</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Tue, 10 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iccycling.github.io/iccc-hub/tags/bike/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bike Washing, Maintenance &amp; Care</title>
+      <link>https://iccycling.github.io/iccc-hub/posts/2025/bike-maintainance/</link>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://iccycling.github.io/iccc-hub/posts/2025/bike-maintainance/</guid>
+      <description>Practical tips for cleaning, maintaining, and caring for your bike, including chain lubrication and basic repairs.</description>
+    </item>
+  </channel>
+</rss>

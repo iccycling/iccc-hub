@@ -1,2 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Authors on ICCC Hub</title><link>https://iccycling.github.io/iccc-hub/authors/</link><description>Recent content in Authors on ICCC Hub</description><generator>Hugo</generator><language>en-GB</language><atom:link href="https://iccycling.github.io/iccc-hub/authors/index.xml" rel="self" type="application/rss+xml"/><item><title>Frederik Beck</title><link>https://iccycling.github.io/iccc-hub/authors/frederik-beck/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://iccycling.github.io/iccc-hub/authors/frederik-beck/</guid><description>&lt;p&gt;Designed and built this website for the club. Always happy to hear feedback, ideas or suggestions.&lt;/p&gt;
-&lt;p&gt;Follow my cycling adventures on &lt;a href="https://www.strava.com/athletes/110809302"&gt;Strava&lt;/a&gt; or get in touch via &lt;a href="https://de.linkedin.com/in/frederik-beck-284648b4"&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on ICCC Hub</title>
+    <link>https://iccycling.github.io/iccc-hub/authors/</link>
+    <description>Recent content in Authors on ICCC Hub</description>
+    <generator>Hugo</generator>
+    <language>en-GB</language>
+    <atom:link href="https://iccycling.github.io/iccc-hub/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frederik Beck</title>
+      <link>https://iccycling.github.io/iccc-hub/authors/frederik-beck/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://iccycling.github.io/iccc-hub/authors/frederik-beck/</guid>
+      <description>&lt;p&gt;Designed and built this website for the club. Always happy to hear feedback, ideas or suggestions.&lt;/p&gt;&#xA;&lt;p&gt;Follow my cycling adventures on &lt;a href=&#34;https://www.strava.com/athletes/110809302&#34;&gt;Strava&lt;/a&gt; or get in touch via &lt;a href=&#34;https://de.linkedin.com/in/frederik-beck-284648b4&#34;&gt;LinkedIn&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

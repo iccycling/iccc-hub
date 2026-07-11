@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Guide on ICCC Hub</title><link>https://iccycling.github.io/iccc-hub/tags/guide/</link><description>Recent content in Guide on ICCC Hub</description><generator>Hugo</generator><language>en-GB</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://iccycling.github.io/iccc-hub/tags/guide/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Write a Blog Post for ICCC</title><link>https://iccycling.github.io/iccc-hub/posts/2026/how-to-write-a-blog-post/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://iccycling.github.io/iccc-hub/posts/2026/how-to-write-a-blog-post/</guid><description>A guide to writing and formatting blog posts for the ICCC Hub — covering Markdown syntax, images, videos, and frontmatter.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guide on ICCC Hub</title>
+    <link>https://iccycling.github.io/iccc-hub/tags/guide/</link>
+    <description>Recent content in Guide on ICCC Hub</description>
+    <generator>Hugo</generator>
+    <language>en-GB</language>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iccycling.github.io/iccc-hub/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Write a Blog Post for ICCC</title>
+      <link>https://iccycling.github.io/iccc-hub/posts/2026/how-to-write-a-blog-post/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://iccycling.github.io/iccc-hub/posts/2026/how-to-write-a-blog-post/</guid>
+      <description>A guide to writing and formatting blog posts for the ICCC Hub — covering Markdown syntax, images, videos, and frontmatter.</description>
+    </item>
+  </channel>
+</rss>
