@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div class="blog-wrap narrow">
+
+  <header class="post-header">
+    {{ with .Params.tags }}
+    <div class="tag-row">
+      {{ range . }}<a href="{{ "tags/" | absURL }}{{ . | urlize }}/" class="tag-pill">{{ . }}</a>{{ end }}
+    </div>
+    {{ end }}
+    <h1>{{ .Title | markdownify }}</h1>
+    <div class="post-meta">
+      {{ with .Params.author }}
+      {{ $authorPage := $.Site.GetPage (printf "authors/%s" (. | urlize)) }}
+      {{ if $authorPage }}<a href="{{ $authorPage.Permalink }}">{{ . }}</a>{{ else }}<span>{{ . }}</span>{{ end }}
+      <span class="sep">·</span>
+      {{ end }}
+      <span>{{ .Date.Format "2 January 2006" }}</span>
+      {{ if eq .Section "posts" }}
+      <span class="sep">·</span>
+      <span>{{ .ReadingTime }} min read</span>
+      {{ end }}
+    </div>
+  </header>
+
+  <article class="post-body">
+    {{ .Content }}
+  </article>
+
+  {{ partial "share-bar.html" . }}
+
+  {{ $pool := where site.RegularPages "Section" "in" (slice "news" "posts") }}
+  {{ $more := where $pool "Permalink" "!=" .Permalink }}
+  {{ $more = $more.ByDate.Reverse | first 3 }}
+  {{ if $more }}
+  <div class="more-to-read">
+    <span class="label">More to read</span>
+    <div class="simple-list">
+      {{ range $more }}{{ partial "entry-card.html" (dict "page" .) }}{{ end }}
+    </div>
+  </div>
+  {{ end }}
+
+</div>
+{{ end }}

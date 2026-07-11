@@ -1,0 +1,79 @@
+{{ define "main" }}
+<div class="blog-wrap">
+
+  <div class="list-header">
+    <div>
+      <h1>Hub</h1>
+      <p>News, ride reports, and stories from ICCC — separate from the main site so anyone in the club can post.</p>
+    </div>
+  </div>
+
+  <div class="nb-layout">
+
+    <div class="nb-news">
+      <div class="nb-col-label">
+        <span>Latest News</span>
+        <a href="{{ "news/" | absURL }}" class="text-link">All →</a>
+      </div>
+      <div class="nb-news-list">
+        {{/* Only show active (non-expired) news */}}
+        {{ $count := 0 }}
+        {{ range (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
+          {{ $expired := false }}
+          {{ with .Params.expires_on }}
+            {{ if lt (time .) now }}{{ $expired = true }}{{ end }}
+          {{ end }}
+          {{ if and (not $expired) (lt $count 6) }}
+          <a href="{{ .Permalink }}" class="nb-news-item">
+            {{ with .Params.tags }}
+            <div class="tag-row">
+              {{ range . }}<span class="tag-pill">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+            <div class="nb-news-title">{{ .Title | markdownify }}</div>
+          </a>
+          {{ $count = add $count 1 }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="nb-blog">
+      <div class="nb-col-label">
+        <span>From the Blog</span>
+        <a href="{{ "posts/" | absURL }}" class="text-link">All posts →</a>
+      </div>
+      <div class="nb-blog-grid">
+        {{ $posts := first 3 (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+        {{ range $i, $p := $posts }}
+          {{ if eq $i 0 }}
+          <a href="{{ $p.Permalink }}" class="nb-blog-card nb-blog-featured">
+            {{ with $p.Params.tags }}
+            <div class="tag-row">
+              {{ range . }}<span class="tag-pill">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+            <div class="nb-blog-title">{{ $p.Title | markdownify }}</div>
+            <p class="nb-blog-excerpt">{{ $p.Params.summary }}</p>
+            <div class="nb-blog-meta">{{ $p.Params.author }} · {{ $p.ReadingTime }} min read</div>
+          </a>
+          {{ else }}
+          <a href="{{ $p.Permalink }}" class="nb-blog-card">
+            {{ with $p.Params.tags }}
+            <div class="tag-row">
+              {{ range . }}<span class="tag-pill">{{ . }}</span>{{ end }}
+            </div>
+            {{ end }}
+            <div class="nb-blog-title">{{ $p.Title | markdownify }}</div>
+            <p class="nb-blog-excerpt">{{ $p.Params.summary }}</p>
+            <div class="nb-blog-meta">{{ $p.Params.author }} · {{ $p.ReadingTime }} min read</div>
+          </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+  </div>
+
+</div>
+{{ end }}

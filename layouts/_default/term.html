@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="blog-wrap">
+
+  <div class="list-header">
+    <div>
+      <h1>#{{ .Title }}</h1>
+      <p>Everything tagged “{{ .Title }}”.</p>
+    </div>
+  </div>
+
+  <div class="simple-list">
+    {{ range .Pages.ByDate.Reverse }}
+      {{ partial "entry-card.html" (dict "page" .) }}
+    {{ end }}
+  </div>
+
+</div>
+{{ end }}
