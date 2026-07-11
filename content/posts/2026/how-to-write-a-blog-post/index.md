@@ -40,11 +40,11 @@ summary: "One sentence shown in the blog list and on the Hub."
 ---
 ```
 
-- `title` — shown everywhere
+- `title` — shown everywhere. Runs through Markdown formatting, so `**bold**` works if you want to emphasise part of a title (useful for news items with a date, see the news guide)
 - `date` — controls sort order, format `YYYY-MM-DD`. **Must be today or in the past** — posts with a future date will not be rendered until that date arrives.
-- `author` — links to your author page if one exists under `content/authors/`
-- `tags` — first tag shown as label on Hub and list
-- `summary` — shown as excerpt in blog list, keep it under 160 characters
+- `author` — shown in the byline. If a matching profile exists under `content/authors/`, the name links to it automatically. If not, it's just shown as plain text — no error, nothing to set up, so generic authors like "ICCC" work fine without a profile.
+- `tags` — shown as small pill badges above the title on the post, the list, and the Hub homepage. All tags are shown (not just the first one), and on the post itself each tag links to a page listing everything with that tag (e.g. `/tags/road/`)
+- `summary` — shown as excerpt in blog list, keep it under 160 characters. Also used as the page's meta description for search engines and social media previews — don't skip it.
 
 ### Social Media Preview Image
 
@@ -62,30 +62,15 @@ If omitted, the default `og-image.jpg` from `static/` is used.
 
 ### News Posts
 
-For **news posts** under `content/news/`, two additional fields are available:
+For **news posts** under `content/news/`, one additional field is available:
 
-**Expiry date** — the item appears greyed out in the news list once it passes:
+**Expiry date** — the item stays visible but appears greyed out in the news list once it passes:
 
 ```
 expires_on: "2025-10-02"
 ```
 
-**Event date** — use this when the news item is about a specific event on a specific date. It will be displayed prominently in the news list and at the top of the post:
-
-```
-event_date: "29. März 2026"
-```
-
-Always write `event_date` as a string in quotes, in whatever format you want displayed. Example of a full news frontmatter:
-
-```
----
-title: "Zeitumstellung — Endlich längere Tage"
-date: 2026-02-25
-event_date: "29. März 2026"
-expires_on: "2026-04-30"
----
-```
+See the dedicated news guide for details — there used to be an `event_date` field too, but that's been retired in favour of just writing the date into the title.
 
 ---
 
@@ -231,4 +216,4 @@ https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 {{< yt "dQw4w9WgXcQ" "Example YouTube video" >}}
 
-This uses `youtube-nocookie.com` — YouTube loads no tracking cookies until the viewer presses play.
+For privacy, this doesn't embed YouTube directly. Visitors first see a plain black box with a play button and a short note — nothing is loaded from YouTube (not even a thumbnail) until they click. Only then does the actual `youtube-nocookie.com` player load.

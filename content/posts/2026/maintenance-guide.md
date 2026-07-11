@@ -21,18 +21,18 @@ iccycling.github.io/
 ├── index.html        ← Homepage
 ├── road.html         ← Road cycling
 ├── offroad.html      ← Off-road / MTB
-├── club.html         ← About the club
+├── club.html          ← About the club (incl. Get in Touch, Committee link)
 ├── other.html        ← Other disciplines
 ├── privacy.html      ← Privacy & Legal
 ├── main.css          ← All styles
-├── main.js           ← Nav behaviour
-├── feed.js           ← Fetches news & blog from Hub
-├── sitemap.xml       ← For search engines
-├── robots.txt        ← For search engine crawlers
-├── favicon.ico       ← Browser tab icon
-├── og-image.jpg      ← Default social media preview image (1200×630px)
-├── fonts/            ← Locally hosted fonts (Syne, Inter)
-└── images/           ← All images used on the site
+├── main.js            ← Nav, mobile menu, WhatsApp popup behaviour
+├── feed.js            ← Fetches news & blog from Hub, renders the homepage widget
+├── sitemap.xml        ← For search engines
+├── robots.txt          ← For search engine crawlers
+├── favicon.ico        ← Browser tab icon
+├── og-image.jpg       ← Default social media preview image (1200×630px)
+├── fonts/              ← Locally hosted fonts (Syne, Inter)
+└── images/             ← All images used on the site
 ```
 
 ### Making Changes
@@ -82,6 +82,8 @@ const FEED_URL = 'https://iccycling.github.io/iccc-hub/feed/index.json';
 
 **If the blog repository is ever renamed**, this URL must be updated to match the new path. The same applies to the blog links in the footer of `index.html`.
 
+The homepage widget shows each item's tags as small pill badges. If you ever change the tag styling, update it in **both** `main.css` (`.tag-pill`, `.tag-row`) and the Hub's `blog.css` — they're intentionally kept identical so tags look the same everywhere.
+
 ---
 
 ## Part 2: Hugo Blog (Hub)
@@ -106,38 +108,61 @@ You need **Hugo Extended** (not the standard version).
 
 ```
 iccc-hub/
-├── hugo.toml                      ← Site config (baseURL, title)
+├── hugo.toml                          ← Site config (baseURL, title, params)
 ├── content/
-│   ├── posts/                     ← Blog posts
+│   ├── posts/                         ← Blog posts
 │   │   └── my-post/
-│   │       ├── index.md           ← Post content (must be named index.md)
+│   │       ├── index.md               ← Post content (must be named index.md)
 │   │       └── images/
 │   │           └── photo.jpg
-│   ├── news/                      ← News items
+│   ├── news/                          ← News items
 │   │   └── my-news/
 │   │       └── index.md
-│   ├── authors/                   ← Author profiles
+│   ├── committee/                     ← Committee member profiles
+│   │   └── jane-doe/
+│   │       ├── index.md
+│   │       └── photo.jpg              ← named "photo.*", found automatically
+│   ├── authors/                       ← Author profiles (optional, for blog bylines)
 │   │   └── my-name/
 │   │       └── index.md
-│   └── feed.md                    ← Triggers feed.json generation (don't touch)
-├── layouts/                       ← HTML templates (don't touch unless needed)
+│   └── feed.md                        ← Triggers feed.json generation (don't touch)
+├── layouts/
+│   ├── baseof.html                    ← Base template: nav, footer, meta tags
+│   ├── index.html                     ← Hub homepage (news/blog widget)
+│   ├── committee/
+│   │   ├── list.html                  ← Committee overview grid
+│   │   └── single.html                ← Individual committee member page
+│   ├── _default/
+│   │   ├── list.html                  ← Shared list template (posts AND news)
+│   │   ├── single.html                ← Shared single template (posts AND news)
+│   │   ├── term.html                  ← Tag archive page (e.g. /tags/road/)
+│   │   └── taxonomy.html              ← Same as term.html, for older Hugo versions
+│   └── partials/
+│       ├── entry-card.html            ← One stacked list entry (reused everywhere)
+│       └── share-bar.html             ← Social share icons on single pages
 ├── static/
-│   ├── blog.css                   ← All styles
-│   ├── favicon.ico                ← Browser tab icon
-│   ├── og-image.jpg               ← Default social media preview (1200×630px)
-│   ├── fonts/                     ← Locally hosted fonts (do not delete)
-│   ├── ICCC.svg                   ← Logo (nav)
-│   └── ICCC-white.svg             ← Logo (footer)
-└── public/                        ← Generated output (don't edit manually)
+│   ├── blog.css                       ← All styles
+│   ├── favicon.ico                    ← Browser tab icon
+│   ├── og-image.jpg                   ← Default social media preview (1200×630px)
+│   ├── fonts/                         ← Locally hosted fonts (do not delete)
+│   ├── ICCC-Hub.svg                   ← Logo (nav)
+│   └── ICCC-white.svg                 ← Logo (footer)
+└── public/                            ← Generated output (don't edit manually)
 ```
+
+Posts and News intentionally share the same templates (`_default/list.html` and `_default/single.html`) — they're visually identical, the only difference is that News gets the greyed-out "expired" treatment automatically once `expires_on` passes. If a page looks wrong for one section but fine for the other, this is the file to check.
 
 ### hugo.toml — Important Settings
 
 ```toml
 baseURL = "https://iccycling.github.io/iccc-hub/"
+enableRobotsTXT = true
+disableKinds = ["RSS"]
 ```
 
-**If the repository is ever renamed**, update `baseURL` to match the new path. Otherwise all links, images, and CSS will break.
+- **If the repository is ever renamed**, update `baseURL` to match the new path. Otherwise all links, images, and CSS will break.
+- `enableRobotsTXT` and the (mostly empty) `disableKinds` list are what make tag pages, `sitemap.xml`, and `robots.txt` work. Don't add `"taxonomy"`, `"term"`, or `"sitemap"` back into `disableKinds` — that breaks the tag pages and search engine files respectively.
+- RSS is intentionally off. To enable it, just remove `"RSS"` from the list — Hugo generates the feed automatically, no extra config needed.
 
 ### Writing a Blog Post
 
@@ -166,6 +191,8 @@ Post content here in Markdown...
 
 > **Important:** `date` must be today or in the past. Posts with a future date will not appear until that date arrives.
 
+`tags` can have as many entries as make sense — all are shown as pill badges, and each links to a page listing everything with that tag. `author` only becomes a clickable link if a matching profile exists under `content/authors/` — otherwise it's shown as plain text, so generic authors like "ICCC" don't need a profile.
+
 To use a custom social media preview image for a post, add `og_image`:
 
 ```yaml
@@ -178,30 +205,25 @@ See the formatting guide post for full Markdown syntax, images, and video embedd
 
 ### Writing a News Item
 
-Same structure, under `content/news/`. Two optional extra fields:
+Same structure, under `content/news/`. One optional extra field:
 
-**`expires_on`** — the item appears greyed out in the news list after this date, but stays accessible:
+**`expires_on`** — the item stays visible but appears greyed out in the news list after this date:
 
 ```yaml
 expires_on: "2025-09-27"
 ```
 
-**`event_date`** — use when the news is about a specific event on a specific date. Displayed prominently in the news list and at the top of the post. Always write as a quoted string:
-
-```yaml
-event_date: "29. März 2026"
-```
-
-Full example:
+There used to be a separate `event_date` field for event announcements — it's been removed to keep things simple. For an event, just put the date into the title:
 
 ```yaml
 ---
-title: "Zeitumstellung — Endlich längere Tage"
+title: "**26 Sept** — Welcome Back Ride"
 date: 2026-02-25
-event_date: "29. März 2026"
-expires_on: "2026-04-30"
+expires_on: "2026-09-27"
 ---
 ```
+
+Titles run through Markdown formatting, so `**bold**` works there.
 
 ### Adding an Author Page
 
@@ -217,16 +239,46 @@ Frontmatter template:
 ```yaml
 ---
 title: "Jane Smith"
----
 bio: "A sentence or two about yourself."
+avatar: "avatar.jpg"
 linkedin: "https://linkedin.com/in/yourprofile"
+email: "jane@example.com"
+---
 ```
+
+All fields except `title` are optional — `avatar` needs an image file placed in the same folder (falls back to a plain initial if omitted), `email` shows a "Get in touch" mail link. Note everything sits **inside** the `---` frontmatter block, including `bio` and `linkedin` — a stray value placed after the closing `---` is treated as page content, not a field, and won't work.
 
 The author's name in post frontmatter must match exactly:
 
 ```yaml
 author: "Jane Smith"
 ```
+
+### Adding a Committee Member
+
+Create a folder under `content/committee/`, name it after the person, and drop a photo alongside `index.md` — no need to reference the filename anywhere, it's found automatically as long as it starts with "photo." (`photo.jpg`, `photo.png`, etc.):
+
+```
+content/committee/jane-doe/
+├── index.md
+└── photo.jpg
+```
+
+Frontmatter template:
+
+```yaml
+---
+title: "Jane Doe"
+role: "President"
+date: 2026-01-01
+---
+
+Free text about Jane here — Markdown, same as a blog post.
+```
+
+- `role` — shown under the name, both on the overview and the individual page
+- `date` — controls the order on the overview grid. **Newest date shown first** — to put someone at the top (e.g. the President), give them the latest date
+- No photo? Falls back automatically to a plain initial, same as author profiles
 
 ### Testing Locally
 
@@ -289,6 +341,8 @@ jobs:
           publish_dir: ./public
 ```
 
+Worth checking every so often whether a newer Hugo version is available and bumping `hugo-version` here — nothing on this site relies on cutting-edge features, so upgrades should be low-risk.
+
 ---
 
 ## Quick Reference
@@ -299,6 +353,7 @@ jobs:
 | Add a blog post | Create `content/posts/my-post/index.md`, push |
 | Add a news item | Create `content/news/my-news/index.md`, push |
 | Add an author | Create `content/authors/my-name/index.md`, push |
+| Add a committee member | Create `content/committee/my-name/index.md` + a `photo.*`, push |
 | Test locally | `hugo server` → open `localhost:1313/iccc-hub/` |
 | Check if deploy worked | GitHub → Actions tab |
 | Update blog styles | Edit `static/blog.css` |

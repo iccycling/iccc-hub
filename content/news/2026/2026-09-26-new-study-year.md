@@ -1,10 +1,8 @@
 ---
 
-title: "New Study Year Begins — Welcome Back!"
+title: "**26 Sep 2026:** New Study Year Begins — Welcome Back!"
 
 date: 2026-07-03
-
-event_date: "26 September"
 
 expires_on: "2026-11-01"
 

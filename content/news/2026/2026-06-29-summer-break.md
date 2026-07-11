@@ -1,6 +1,6 @@
 ---
 
-title: "Summer Break Begins — See You Next Study Year"
+title: "**29 Jun 2026:** Summer Break Begins — See You Next Study Year"
 
 date: 2026-06-29
 

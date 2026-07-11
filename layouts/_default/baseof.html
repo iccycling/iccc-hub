@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ if .IsHome }}ICCC Hub{{ else }}{{ .Title }} — ICCC Hub{{ end }}</title>
 <meta name="description" content="{{ with .Params.summary }}{{ . }}{{ else }}News and blog posts from Imperial College Cycling Club.{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
 
 <!-- Favicon -->
 <link rel="icon" href="{{ "favicon.ico" | absURL }}">
@@ -33,28 +34,34 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
 <nav>
-  <a href="{{ .Site.Params.mainSite }}" class="nav-logo">
-    <img src="{{ "ICCC.svg" | absURL }}" alt="ICCC" style="height:28px;width:auto;">
+  <a href="{{ "" | absURL }}" class="nav-logo">
+    <img src="{{ "ICCC-Hub.svg" | absURL }}" alt="ICCC Hub" style="height:28px;width:auto;">
   </a>
   <ul class="nav-center">
     <li><a href="{{ "posts/" | absURL }}"{{ if eq .Section "posts" }} class="active"{{ end }}>Blog</a></li>
     <li><a href="{{ "news/" | absURL }}"{{ if eq .Section "news" }} class="active"{{ end }}>News</a></li>
+    <li><a href="{{ "committee/" | absURL }}"{{ if eq .Section "committee" }} class="active"{{ end }}>Committee</a></li>
   </ul>
-  <a href="{{ .Site.Params.mainSite }}" class="nav-back">Back to ICCC</a>
+  <a href="{{ .Site.Params.mainSite }}" class="nav-back">ICCC main website</a>
   <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
 <!-- Mobile dropdown -->
-<div class="nav-mobile-menu" id="nav-mobile-menu">
+<div class="nav-mobile-menu" id="nav-mobile-menu" role="navigation" aria-label="Mobile menu" aria-hidden="true">
   <a href="{{ "posts/" | absURL }}"{{ if eq .Section "posts" }} class="active"{{ end }}>Blog</a>
   <a href="{{ "news/" | absURL }}"{{ if eq .Section "news" }} class="active"{{ end }}>News</a>
-  <a href="{{ .Site.Params.mainSite }}">← Back to ICCC</a>
+  <a href="{{ "committee/" | absURL }}"{{ if eq .Section "committee" }} class="active"{{ end }}>Committee</a>
+  <a href="{{ .Site.Params.mainSite }}">← ICCC main website</a>
 </div>
 
+<main id="main">
 {{ block "main" . }}{{ end }}
+</main>
 
 <footer class="blog-footer">
   <a href="{{ .Site.Params.mainSite }}" class="blog-footer-brand">
@@ -63,6 +70,7 @@
   <div class="blog-footer-links">
     <a href="{{ "posts/" | absURL }}">Blog</a>
     <a href="{{ "news/" | absURL }}">News</a>
+    <a href="{{ "committee/" | absURL }}">Committee</a>
     <a href="{{ .Site.Params.mainSite }}">Main Website</a>
     <a href="{{ .Site.Params.mainSite }}privacy.html">Privacy & Legal</a>
   </div>
@@ -73,15 +81,38 @@
   // Hamburger menu
   const btn = document.getElementById('nav-hamburger');
   const menu = document.getElementById('nav-mobile-menu');
+  const nav = document.querySelector('nav');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-controls', 'nav-mobile-menu');
+
+  function closeMenu() {
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('open');
+    menu.setAttribute('aria-hidden', 'true');
+  }
+  function openMenu() {
+    btn.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    menu.classList.add('open');
+    menu.setAttribute('aria-hidden', 'false');
+  }
+
   btn.addEventListener('click', () => {
-    btn.classList.toggle('open');
-    menu.classList.toggle('open');
+    if (menu.classList.contains('open')) closeMenu(); else openMenu();
   });
   // Close on link click
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    btn.classList.remove('open');
-    menu.classList.remove('open');
-  }));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (menu.classList.contains('open') && !nav.contains(e.target) && !menu.contains(e.target)) {
+      closeMenu();
+    }
+  });
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) closeMenu();
+  });
 </script>
 
 </body>

@@ -1,10 +1,10 @@
 ---
 
-title: "Tour de France Time!"
+title: "**July 2026:** Tour de France Time!"
 
 date: 2026-07-02
 
-event_date: "4 July"
+event_date: "July"
 
 expires_on: "2026-07-27"
 

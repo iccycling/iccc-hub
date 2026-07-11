@@ -2,7 +2,7 @@ baseURL = "https://iccycling.github.io/iccc-hub/"
 languageCode = "en-GB"
 title = "ICCC Hub"
 
-disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+enableRobotsTXT = true
 
 [params]
   mainSite = "https://iccycling.github.io/"
