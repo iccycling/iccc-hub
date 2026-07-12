@@ -11,6 +11,8 @@ summary: "The current ICCC jersey has served us well — but it might be time to
 
 {{< fig src="screenshot.png" caption="The current ICCC jersey (manufacturer rendering by Kalas, not an actual photo)" >}}
 
+**Disclaimer:** This is an opinion piece written by an ICCC alumnus. It is intended to spark an open discussion about the club's visual identity.
+
 Here's the honest take: it doesn't quite work anymore, and here's why.
 
 The thin horizontal stripes on the chest look a lot like the UCI rainbow bands — and we even have one stripe more. On top of that, there are too many colours packed into a small space, so it looks busy instead of bold. The band below the chest cuts the jersey visually in half. That feels stiff and too traditional, not like the clean, dynamic look you'd expect from a modern cycling kit.
