@@ -7,11 +7,11 @@ tags: ["Kit Design", "Opinion"]
 summary: "The current ICCC jersey has served us well — but it might be time to rethink it for modern cycling. Here's why, and an open call for ideas."
 ---
 
+**Disclaimer:** This is an opinion piece written by an ICCC alumnus. It is intended to spark an open discussion about the club's visual identity.
+
 ## The Current Jersey
 
 {{< fig src="screenshot.png" caption="The current ICCC jersey (manufacturer rendering by Kalas, not an actual photo)" >}}
-
-**Disclaimer:** This is an opinion piece written by an ICCC alumnus. It is intended to spark an open discussion about the club's visual identity.
 
 Here's the honest take: it doesn't quite work anymore, and here's why.
 
@@ -29,7 +29,7 @@ Leaning into a bold, singular blue would align the jersey with how Imperial actu
 
 ## What This Means
 
-We think it's time ICCC gives the jersey a clean break from traditional academic heraldry — something that actually reflects how Imperial and Imperial College Union present themselves today: modern, tech-forward, and an international community, rather than a nod to 19th-century college tradition.
+I think it's time ICCC gives the jersey a clean break from traditional academic heraldry — something that actually reflects how Imperial and Imperial College Union present themselves today: modern, tech-forward, and an international community, rather than a nod to 19th-century college tradition.
 
 This isn't a finished plan — it's an open question. Do you agree the current design has run its course? What would you want to see instead? Drop us your ideas, sketches, or inspiration — [Instagram](https://instagram.com/iccycling) works well, or just grab one of us at a ride.
 
