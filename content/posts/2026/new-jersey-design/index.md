@@ -3,7 +3,7 @@
 title: "Time for a New Jersey Design"
 date: 2026-07-04
 author: "Frederik Beck"
-tags: ["Kit Design"]
+tags: ["Kit Design", "Opinion"]
 summary: "The current ICCC jersey has served us well — but it might be time to rethink it for modern cycling. Here's why, and an open call for ideas."
 ---
 
