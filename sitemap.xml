@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://iccycling.github.io/iccc-hub/committee/</loc>
-    <lastmod>2026-09-02T00:00:00+00:00</lastmod>
+    <loc>https://iccycling.github.io/iccc-hub/news/2026/welcome-week/</loc>
+    <lastmod>2026-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://iccycling.github.io/iccc-hub/</loc>
+    <lastmod>2026-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://iccycling.github.io/iccc-hub/news/</loc>
+    <lastmod>2026-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://iccycling.github.io/iccc-hub/tags/news/</loc>
+    <lastmod>2026-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://iccycling.github.io/iccc-hub/tags/</loc>
+    <lastmod>2026-09-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://iccycling.github.io/iccc-hub/committee/</loc>
     <lastmod>2026-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://iccycling.github.io/iccc-hub/committee/thomas-homes/</loc>
@@ -32,19 +44,10 @@
     <loc>https://iccycling.github.io/iccc-hub/tags/opinion/</loc>
     <lastmod>2026-07-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://iccycling.github.io/iccc-hub/tags/</loc>
-    <lastmod>2026-07-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://iccycling.github.io/iccc-hub/posts/2026/new-jersey-design/</loc>
     <lastmod>2026-07-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://iccycling.github.io/iccc-hub/news/2026/2026-09-26-new-study-year/</loc>
-    <lastmod>2026-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://iccycling.github.io/iccc-hub/news/</loc>
-    <lastmod>2026-07-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://iccycling.github.io/iccc-hub/tags/news/</loc>
     <lastmod>2026-07-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://iccycling.github.io/iccc-hub/news/2026/2026-07-04-tour-de-france/</loc>
